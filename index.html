@@ -958,31 +958,13 @@
         }
 
 
-        /* Contact details links in light-blue section */
-        #contact .detail-box a { color: #000000 !important; }
-
-
-        /* Professional Introduction Formatting (Even Margin Distribution) */
-        .intro-text {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: justify;
-            text-justify: inter-word;
-            line-height: 1.8;
-            font-size: 1.05rem;
-        }
-
-        .intro-text p {
-            margin-bottom: 1.2rem;
-        }
-
-
-        /* Footer copyright visibility fix */
-        footer .footer-copyright,
-        footer p,
-        footer span {
-            color: #ffffff !important; /* high contrast on dark background */
-            font-weight: 500;
+        /* Final footer single-line center fix */
+        footer p, footer .footer-copyright {
+            text-align: center !important;
+            color: #ffffff !important;
+            white-space: nowrap !important;
+            width: 100% !important;
+            margin: 20px auto 0 auto !important;
         }
 
 </style>
@@ -1046,14 +1028,17 @@
             <div class="cta-group">
                 <a href="#contact" class="btn btn-primary">REQUEST CONSULTATION</a>
                 <a href="#services" class="btn btn-secondary">VIEW SERVICES</a>
-                <a href="Polaris_Capability_Statement.pdf" class="btn btn-secondary" download>DOWNLOAD CAPABILITY STATEMENT</a>
+                <a href="assets/Polaris_Capability_Statement.pdf" class="btn btn-secondary" download>DOWNLOAD CAPABILITY STATEMENT</a>
             </div>
             <div class="contact-info">
                 <a href="tel:732-491-7038" class="contact-item">
                     <span class="contact-icon">📞</span>
                     <span>732-491-7038</span>
                 </a>
-                <a href="mailto:pbengineering168@outlook.com" class="contact-item"><span class="contact-icon">📧</span><span>pbengineering168@outlook.com</span></a>
+                <a href="/cdn-cgi/l/email-protection#bdcddfd8d3dad4d3d8d8cfd4d3da8c8b85fdd2c8c9d1d2d2d693ded2d0" class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <span><span class="__cf_email__" data-cfemail="d5a5b7b0bbb2bcbbb0b0a7bcbbb2e4e3ed95baa0a1b9bababefbb6bab8">[email&#160;protected]</span></span>
+                </a>
             </div>
         </div>
     </section>
@@ -1064,18 +1049,14 @@
         
         <div class="intro-grid">
                         <div class="intro-text">
-
                 <p>
-                    Polaris Bridge Engineering LLC is a civil and structural engineering consulting firm delivering practical, code-compliant, and construction-ready solutions for transportation and building infrastructure projects.
+                    Polaris Bridge Engineering LLC is a professional structural and infrastructure engineering consulting firm providing high-quality design, analysis, and engineering solutions for bridge, commercial, and structural retrofit projects.
                 </p>
                 <p>
-                    Our expertise includes bridge design, rehabilitation, load rating, and inspections, as well as parking structures, transit facilities, commercial and residential buildings, retaining walls, culverts, foundations, temporary support systems, and structural retrofit projects for both bridges and buildings.
+                    Led by a licensed Professional Engineer with extensive experience in highway bridge rehabilitation, load rating, and infrastructure design, our firm delivers practical, code-compliant, and efficient engineering services tailored to contractors, developers, and engineering firms.
                 </p>
                 <p>
-                    Founded by a licensed Professional Engineer with extensive public infrastructure experience, the firm provides high-quality engineering services in accordance with AASHTO, AREMA, ACI, ASCE 7, AISC, IBC, and applicable state and local standards.
-                </p>
-                <p>
-                    As a certified Virginia DBE/MBE firm, Polaris Bridge Engineering LLC supports state and federally funded transportation projects and welcomes partnerships with prime consultants and contractors.
+                    The firm delivers high-quality, code-compliant, and contractor-focused engineering solutions aligned with AASHTO, AREMA, ACI, ASCE-7, AISC, and IBC standards.
                 </p>
             </div>
 <div class="stats-box">
@@ -1228,7 +1209,7 @@
                 <div class="detail-box">
                     <h3>Contact Information</h3>
                     <p><strong>Phone:</strong> <a href="tel:732-491-7038">732-491-7038</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:pbengineering168@outlook.com">pbengineering168@outlook.com</a></p>
+                    <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#146476717a737d7a7171667d7a7325222c547b6160787b7b7f3a777b79"><span class="__cf_email__" data-cfemail="adddcfc8c3cac4c3c8c8dfc4c3ca9c9b95edc2d8d9c1c2c2c683cec2c0">[email&#160;protected]</span></a></p>
                     <p><strong>Response Time:</strong> 24-48 hours</p>
                 </div>
                 
@@ -1256,46 +1237,34 @@
         <p>© <span id="year"></span> Polaris Bridge Engineering LLC. Licensed Professional Engineer | VA • MD • DC</p>
     </footer>
 
-    
-    <script>
-        // Set current year in footer
-        const yearEl = document.getElementById('year');
-        if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-        // Smooth scrolling for in-page navigation links
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                const target = document.querySelector(href);
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    // close mobile menu after click
-                    document.querySelector('.nav-links')?.classList.remove('active');
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
         });
 
-        // Header background on scroll
+        // Mobile menu toggle
+// Header background on scroll
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
-            if (!header) return;
-            header.style.background = (window.scrollY > 100)
-                ? 'rgba(26, 35, 50, 0.98)'
-                : 'rgba(26, 35, 50, 0.95)';
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 35, 50, 0.98)';
+            } else {
+                header.style.background = 'rgba(26, 35, 50, 0.95)';
+            }
         });
 
-        // Mobile menu toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        menuToggle?.addEventListener('click', () => {
-            navLinks?.classList.toggle('active');
-        });
-
-        // Reveal animations (subtle)
-        const revealTargets = document.querySelectorAll(
-            '.expertise-card, .service-category, .project-item, .reason-item, .contact-form, .detail-box, .stats-box'
-        );
+        // Intersection Observer for subtle reveal animations
+        const revealTargets = document.querySelectorAll('.expertise-card, .service-category, .project-item, .reason-item, .contact-form, .detail-box, .stats-box');
         revealTargets.forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(18px)';
@@ -1303,6 +1272,7 @@
         });
 
         const observerOptions = { threshold: 0.12, rootMargin: '0px 0px -80px 0px' };
+
         const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1314,6 +1284,7 @@
         }, observerOptions);
 
         revealTargets.forEach(el => observer.observe(el));
-    </script>
-</body>
-</html>
+
+        // Mobile menu toggle (adds/removes .active)
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('acti
