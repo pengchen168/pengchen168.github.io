@@ -911,60 +911,47 @@
         }
 
 
-        /* ===== LIGHT BLUE CONSULTATION / CONTACT SECTION ===== */
-        #contact {
-            background: linear-gradient(135deg, #eaf4ff 0%, #dbeeff 100%) !important;
+        /* ===== Footer copyright (centered + visible) ===== */
+        .site-copyright{
+            text-align:center !important;
+            color:#ffffff !important;
+            font-size:0.95rem !important;
+            font-weight:500 !important;
+            margin:22px auto 0 auto !important;
+            width:100% !important;
+            display:block !important;
+            white-space:nowrap;
         }
-
-        #contact h2 {
-            color: #0f2a44 !important;
-            font-weight: 700;
-        }
-
-        /* Make email, phone, and service area text black and clear */
-        #contact a,
-        #contact p,
-        #contact span,
-        #contact .detail-box p,
-        #contact .contact-info,
-        #contact .contact-details {
-            color: #000000 !important;
-            font-weight: 500;
-        }
-
-        /* Contact cards cleaner */
-        #contact .contact-form {
-            background: #ffffff !important;
-            border: 1px solid rgba(15, 42, 68, 0.12) !important;
-            box-shadow: 0 10px 28px rgba(15, 42, 68, 0.08) !important;
-        }
-
-        #contact .detail-box {
-            background: #f7fbff !important;
-            border-left: 4px solid #2c4a6d !important;
-        }
-
-        /* Labels and inputs readability */
-        #contact label {
-            color: #000000 !important;
-            font-weight: 600;
-        }
-
-        #contact input,
-        #contact textarea {
-            background: #ffffff !important;
-            border: 1px solid #c9d6e6 !important;
-            color: #000000 !important;
+        @media (max-width: 520px){
+            .site-copyright{ white-space:normal; line-height:1.4; padding:0 12px; }
         }
 
 
-        /* Final footer single-line center fix */
-        footer p, footer .footer-copyright {
+        /* ===== About The Firm - Evenly Distributed Professional Text ===== */
+        .intro-text {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: justify;
+            line-height: 1.75;
+            font-size: 1.08rem;
+            color: #333333;
+        }
+
+        .intro-text p {
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+
+        /* ===== Clean Two-Line Professional Footer ===== */
+        .site-copyright, footer p {
             text-align: center !important;
             color: #ffffff !important;
-            white-space: nowrap !important;
+            font-size: 0.95rem !important;
+            line-height: 1.6 !important;
+            margin: 24px auto 0 auto !important;
             width: 100% !important;
-            margin: 20px auto 0 auto !important;
+            font-weight: 500;
         }
 
 </style>
@@ -973,7 +960,7 @@
     <header>
         <nav>
             <a href="#home" class="logo" aria-label="Polaris Bridge Engineering LLC">
-                <img src="polaris_logo.png" alt="Polaris Bridge Engineering LLC logo" style="height:40px;width:auto;vertical-align:middle;">
+                <img src="assets/polaris_logo.png" alt="Polaris Bridge Engineering LLC logo" style="height:40px;width:auto;vertical-align:middle;">
               </a>
             <ul class="nav-links">
                 <li><a href="#why">Why Choose Us</a></li>
@@ -992,28 +979,28 @@
 
             <div class="project-gallery" aria-label="Featured project photos">
                 <figure class="project-card">
-                    <img src="bridge_design.jpg" alt="Bridge design (aerial view)" loading="lazy">
+                    <img src="assets/bridge_design.jpg" alt="Bridge design (aerial view)" loading="lazy">
                     <figcaption>
                         <span class="project-title">Bridge Design</span>
                         <span class="project-sub">Steel & PSC girders • Plans • Detailing</span>
                     </figcaption>
                 </figure>
                 <figure class="project-card">
-                    <img src="bridge_inspection.jpg" alt="Bridge inspection field work" loading="lazy">
+                    <img src="assets/bridge_inspection.jpg" alt="Bridge inspection field work" loading="lazy">
                     <figcaption>
                         <span class="project-title">Bridge Inspection</span>
                         <span class="project-sub">NBIS support • Field inspection • Reports</span>
                     </figcaption>
                 </figure>
                 <figure class="project-card">
-                    <img src="shoring_jacking.jpg" alt="Structural shoring and bridge jacking support" loading="lazy">
+                    <img src="assets/shoring_jacking.jpg" alt="Structural shoring and bridge jacking support" loading="lazy">
                     <figcaption>
                         <span class="project-title">Shoring & Bridge Jacking</span>
                         <span class="project-sub">Staged support • Jacking plans • Safety</span>
                     </figcaption>
                 </figure>
                 <figure class="project-card">
-                    <img src="commercial_support.jpg" alt="Commercial building structural support for RTU/equipment" loading="lazy">
+                    <img src="assets/commercial_support.jpg" alt="Commercial building structural support for RTU/equipment" loading="lazy">
                     <figcaption>
                         <span class="project-title">Commercial Structural Support</span>
                         <span class="project-sub">RTU/equipment framing • Roof supports</span>
@@ -1035,9 +1022,9 @@
                     <span class="contact-icon">📞</span>
                     <span>732-491-7038</span>
                 </a>
-                <a href="/cdn-cgi/l/email-protection#bdcddfd8d3dad4d3d8d8cfd4d3da8c8b85fdd2c8c9d1d2d2d693ded2d0" class="contact-item">
+                <a href="mailto:pbengineering168@outlook.com" class="contact-item">
                     <span class="contact-icon">📧</span>
-                    <span><span class="__cf_email__" data-cfemail="d5a5b7b0bbb2bcbbb0b0a7bcbbb2e4e3ed95baa0a1b9bababefbb6bab8">[email&#160;protected]</span></span>
+                    <span>pbengineering168@outlook.com</span>
                 </a>
             </div>
         </div>
@@ -1049,14 +1036,18 @@
         
         <div class="intro-grid">
                         <div class="intro-text">
+
                 <p>
-                    Polaris Bridge Engineering LLC is a professional structural and infrastructure engineering consulting firm providing high-quality design, analysis, and engineering solutions for bridge, commercial, and structural retrofit projects.
+                    Polaris Bridge Engineering LLC is a civil and structural engineering consulting firm specializing in practical, code-compliant, and construction-ready engineering solutions for transportation, infrastructure and building projects. The firm is committed to delivering high-quality technical services that prioritize safety, constructability, and long-term structural performance.
                 </p>
                 <p>
-                    Led by a licensed Professional Engineer with extensive experience in highway bridge rehabilitation, load rating, and infrastructure design, our firm delivers practical, code-compliant, and efficient engineering services tailored to contractors, developers, and engineering firms.
+                    Our core expertise includes bridge design, bridge rehabilitation, bridge load rating, and bridge inspections, as well as parking structures, transit facilities, commercial and residential buildings, retaining walls, culverts, foundations, and temporary structural support solutions. We provide responsive and detail-oriented engineering support tailored to the needs of public agencies, consultants, and contractors.
                 </p>
                 <p>
-                    The firm delivers high-quality, code-compliant, and contractor-focused engineering solutions aligned with AASHTO, AREMA, ACI, ASCE-7, AISC, and IBC standards.
+                    Founded by a licensed Professional Engineer with extensive experience in public infrastructure and structural engineering, Polaris Bridge Engineering LLC performs all work in accordance with AASHTO, AREMA, ACI, ASCE 7, AISC, IBC, and applicable State and Local Authority design standards. The firm brings strong agency knowledge and a thorough understanding of transportation and building project requirements.
+                </p>
+                <p>
+                    As a Certified Virginia DBE/MBE firm, Polaris Bridge Engineering LLC is actively seeking opportunities to partner with prime consultants and contractors as a subcontractor on Federal, State, and local projects. We are dedicated to providing reliable technical support, competitive service, and high-quality deliverables to help project teams meet schedule, budget, and regulatory requirements.
                 </p>
             </div>
 <div class="stats-box">
@@ -1153,7 +1144,7 @@
         <div class="services-container" style="margin-top: 1.5rem;">
             <div class="service-category">
                 <h3>Agency Knowledge</h3>
-                <p>Strong understanding of agency standards and requirements including VDOT, DDOT, MDOT, Maryland counties, and Fairfax County (VA), with experience working under state and public infrastructure guidelines.</p>
+                <p>Strong understanding of agency standards and requirements including Fairfax County and DDOT, with experience working under DOT and public infrastructure guidelines.</p>
             </div>
 
             <div class="service-category">
@@ -1209,7 +1200,7 @@
                 <div class="detail-box">
                     <h3>Contact Information</h3>
                     <p><strong>Phone:</strong> <a href="tel:732-491-7038">732-491-7038</a></p>
-                    <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#146476717a737d7a7171667d7a7325222c547b6160787b7b7f3a777b79"><span class="__cf_email__" data-cfemail="adddcfc8c3cac4c3c8c8dfc4c3ca9c9b95edc2d8d9c1c2c2c683cec2c0">[email&#160;protected]</span></a></p>
+                    <p><strong>Email:</strong> <a href="mailto:pbengineering168@outlook.com">pbengineering168@outlook.com</a></p>
                     <p><strong>Response Time:</strong> 24-48 hours</p>
                 </div>
                 
@@ -1234,10 +1225,14 @@
     </section>
 
     <footer>
-        <p>© <span id="year"></span> Polaris Bridge Engineering LLC. Licensed Professional Engineer | VA • MD • DC</p>
+
+        <p class="site-copyright" style="text-align:center; color:#ffffff; font-size:0.95rem; line-height:1.6; margin:25px auto 0 auto;">
+    © 2026 Polaris Bridge Engineering LLC. All rights reserved.<br>
+    Certified DBE/MBE Firm – Virginia | Licensed Professional Engineer – VA • MD • DC
+</p>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1287,4 +1282,17 @@
 
         // Mobile menu toggle (adds/removes .active)
         menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('acti
+            navLinks.classList.toggle('active');
+        });
+
+        // Close dropdown after clicking a link (mobile)
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            a.addEventListener('click', () => navLinks.classList.remove('active'));
+        });
+
+        // Footer year
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
