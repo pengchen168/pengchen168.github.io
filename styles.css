@@ -492,12 +492,19 @@ p  { color: var(--text-light); line-height: 1.8; }
 /* --- Contact Sidebar --- */
 .contact-sidebar {}
 .contact-info-block {
-  background: var(--primary);
+  background: #3d6fa8;
   border-radius: var(--radius-lg);
   padding: 36px;
   margin-bottom: 24px;
+  color: var(--white);
 }
 .contact-info-block h3 { color: var(--white); margin-bottom: 24px; font-size: 1.1rem; }
+.contact-info-block h4 { color: var(--accent) !important; }
+.contact-info-block p { color: rgba(255,255,255,0.85) !important; }
+.contact-info-block .contact-info-item { color: rgba(255,255,255,0.9); }
+.contact-info-block .contact-info-item a { color: var(--white) !important; font-weight: 600; }
+.contact-info-block .contact-info-item a:hover { color: var(--accent) !important; }
+.contact-info-block .state-badge.primary { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); color: var(--white); }
 .contact-info-item {
   display: flex;
   gap: 14px;
