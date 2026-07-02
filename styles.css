@@ -6,16 +6,16 @@
 
 /* --- Variables --- */
 :root {
-  --primary:       #1a2332;
-  --primary-dark:  #0f1922;
-  --secondary:     #2c4a6d;
-  --accent:        #c89b3f;
-  --accent-light:  #e8c068;
-  --light:         #f6f4ef;
+  --primary:       #1558a8;
+  --primary-dark:  #0d3d7a;
+  --secondary:     #2472c8;
+  --accent:        #e8a820;
+  --accent-light:  #f5c84a;
+  --light:         #f0f5fc;
   --white:         #ffffff;
   --text:          #2a2a2a;
-  --text-light:    #666666;
-  --border:        #ddd8cc;
+  --text-light:    #555555;
+  --border:        #ccd9ec;
   --shadow:        0 4px 20px rgba(0,0,0,0.08);
   --shadow-lg:     0 12px 48px rgba(0,0,0,0.14);
   --radius:        4px;
@@ -492,7 +492,7 @@ p  { color: var(--text-light); line-height: 1.8; }
 /* --- Contact Sidebar --- */
 .contact-sidebar {}
 .contact-info-block {
-  background: #3d6fa8;
+  background: #2472c8;
   border-radius: var(--radius-lg);
   padding: 36px;
   margin-bottom: 24px;
