@@ -397,7 +397,7 @@ p  { color: var(--text-light); line-height: 1.8; }
   font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--secondary);
   display: block;
   margin-bottom: 3px;
 }
