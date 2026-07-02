@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact | Polaris Bridge Engineering LLC</title>
+<meta name="description" content="Contact Polaris Bridge Engineering LLC for bridge design, inspection, load rating, and structural engineering inquiries. Licensed PE — VA, MD, DC, NY, NJ."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link crossorigin="" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 64px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+}
+.contact-sidebar {}
+.contact-info-block {
+  margin-bottom: 36px;
+}
+.contact-info-block h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+.contact-info-item a { color: var(--text); font-weight: 500; }
+.contact-info-item a:hover { color: var(--accent); }
+.service-area-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+.state-badge {
+  display: inline-block;
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 4px 14px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--secondary);
+}
+.state-badge.primary {
+  background: var(--secondary);
+  color: var(--white);
+  border-color: var(--secondary);
+}
+/* Form */
+.contact-form-wrapper {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+}
+@media (max-width: 640px) {
+  .contact-form-wrapper { padding: 28px 20px; }
+}
+.contact-form-wrapper h3 {
+  margin-bottom: 8px;
+}
+.contact-form-wrapper .form-subhead {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  margin-bottom: 28px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 640px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+.form-group {
+  margin-bottom: 18px;
+}
+.form-group label {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 7px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  color: var(--text);
+  background: var(--light);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(44,74,109,0.12);
+  background: var(--white);
+}
+.form-group textarea {
+  height: 130px;
+  resize: vertical;
+}
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236b7280'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+}
+.form-required { color: var(--accent); margin-left: 2px; }
+.form-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 8px;
+}
+.form-submit-btn:hover { background: var(--secondary); transform: translateY(-1px); }
+.form-submit-btn:active { transform: translateY(0); }
+.form-note {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin-top: 12px;
+  text-align: center;
+}
+/* Success state */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+.form-success h3 { color: var(--secondary); margin-bottom: 12px; }
+.form-success p { color: var(--text-light); font-size: 0.9rem; }
+/* Availability block */
+.avail-card {
+  background: var(--primary);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  color: var(--white);
+  margin-top: 32px;
+}
+.avail-card h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.avail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.75);
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.avail-item:last-child { border-bottom: none; }
+.avail-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  background: rgba(200,155,63,0.18);
+  color: var(--accent);
+  border: 1px solid rgba(200,155,63,0.3);
+  border-radius: 100px;
+  padding: 3px 10px;
+}
+.avail-badge.green {
+  background: rgba(52,211,153,0.12);
+  color: #34d399;
+  border-color: rgba(52,211,153,0.3);
+}
+</style>
+</head>
+<body class="page-offset">
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="polaris_logo.png" alt="Polaris Bridge Engineering LLC"/></a>
+    <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">☰</button>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="nav-cta active">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-hero-label">Get in Touch</span>
+    <h1>Contact Us</h1>
+    <p>Request a proposal, discuss a teaming opportunity, or ask a technical question — we respond within 24–48 hours.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section">
+  <div class="section-inner">
+    <div class="contact-layout">
+
+      <!-- Left: Info -->
+      <div>
+        <span class="section-label">Direct Contact</span>
+        <h2 style="margin-bottom:32px;">Let's Work Together</h2>
+
+        <div class="contact-info-block">
+          <h4>Phone</h4>
+          <div class="contact-info-item">
+            <span>📞</span>
+            <div><a href="tel:7324917038">(732) 491-7038</a><br/><span style="font-size:0.8rem;">Mon–Fri, 9am–6pm ET</span></div>
+          </div>
+        </div>
+
+        <div class="contact-info-block">
+          <h4>Email</h4>
+          <div class="contact-info-item">
+            <span>✉️</span>
+            <div><a href="mailto:pbengineering168@outlook.com">pbengineering168@outlook.com</a><br/><span style="font-size:0.8rem;">24–48 hour response time</span></div>
+          </div>
+        </div>
+
+        <div class="contact-info-block">
+          <h4>Service Area</h4>
+          <p style="font-size:0.88rem;color:var(--text-light);margin-bottom:14px;">PE licensed and actively serving clients in the following states:</p>
+          <div class="service-area-badges">
+            <span class="state-badge primary">Virginia</span>
+            <span class="state-badge primary">Maryland</span>
+            <span class="state-badge primary">D.C.</span>
+            <span class="state-badge primary">New York</span>
+            <span class="state-badge primary">New Jersey</span>
+          </div>
+          <p style="font-size:0.8rem;color:var(--text-light);margin-top:12px;">Projects in other states considered case-by-case with appropriate licensure coordination.</p>
+        </div>
+
+        <div class="contact-info-block">
+          <h4>Firm Credentials</h4>
+          <div class="contact-info-item">
+            <span>🏆</span>
+            <div>Certified Virginia DBE/MBE Firm<br/><span style="font-size:0.8rem;">Ideal for public project teaming requirements</span></div>
+          </div>
+          <div class="contact-info-item">
+            <span>📋</span>
+            <div>
+              <a href="Polaris_Capability_Statement.pdf" download>Download Capability Statement (PDF)</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Availability -->
+        <div class="avail-card">
+          <h4>Current Availability</h4>
+          <div class="avail-item">
+            <span>Bridge Design &amp; Rehabilitation</span>
+            <span class="avail-badge green">Available</span>
+          </div>
+          <div class="avail-item">
+            <span>Bridge Inspection &amp; Load Rating</span>
+            <span class="avail-badge green">Available</span>
+          </div>
+          <div class="avail-item">
+            <span>Structural Engineering</span>
+            <span class="avail-badge green">Available</span>
+          </div>
+          <div class="avail-item">
+            <span>Construction Support / Shoring</span>
+            <span class="avail-badge green">Available</span>
+          </div>
+          <div class="avail-item">
+            <span>New DBE/MBE Teaming Partnerships</span>
+            <span class="avail-badge">Actively Seeking</span>
+          </div>
+        </div>
+      </div><!-- /left -->
+
+      <!-- Right: Form -->
+      <div class="contact-form-wrapper">
+        <h3>Project Inquiry</h3>
+        <p class="form-subhead">Tell us about your project — we'll follow up with a proposed scope and fee.</p>
+
+        <form id="contact-form" onsubmit="handleSubmit(event)" action="mailto:pbengineering168@outlook.com" method="POST" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name <span class="form-required">*</span></label>
+              <input type="text" name="first_name" required placeholder="Jane"/>
+            </div>
+            <div class="form-group">
+              <label>Last Name <span class="form-required">*</span></label>
+              <input type="text" name="last_name" required placeholder="Smith"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Company / Agency</label>
+            <input type="text" name="company" placeholder="VDOT, HDR, Henrico County..."/>
+          </div>
+          <div class="form-group">
+            <label>Email <span class="form-required">*</span></label>
+            <input type="email" name="email" required placeholder="jsmith@agency.gov"/>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="(555) 123-4567"/>
+          </div>
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select name="service">
+              <option value="" disabled selected>Select a service…</option>
+              <option value="bridge-design">Bridge Design</option>
+              <option value="bridge-rehab">Bridge Rehabilitation</option>
+              <option value="inspection">Bridge Inspection</option>
+              <option value="load-rating">Load Rating</option>
+              <option value="structural">Structural Engineering</option>
+              <option value="shoring">Shoring / Jacking / Construction Support</option>
+              <option value="teaming">DBE/MBE Teaming Opportunity</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>State / Location</label>
+            <select name="state">
+              <option value="" disabled selected>Select a state…</option>
+              <option value="VA">Virginia</option>
+              <option value="MD">Maryland</option>
+              <option value="DC">Washington, D.C.</option>
+              <option value="NY">New York</option>
+              <option value="NJ">New Jersey</option>
+              <option value="other">Other State</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Project Description <span class="form-required">*</span></label>
+            <textarea name="message" required placeholder="Brief description of project scope, location, estimated schedule, and how we can help…"></textarea>
+          </div>
+          <button type="submit" class="form-submit-btn">Send Inquiry →</button>
+          <p class="form-note">We respond within 24–48 business hours. Your information is never shared.</p>
+        </form>
+
+        <div class="form-success" id="form-success">
+          <div style="font-size:2.5rem;margin-bottom:16px;">✅</div>
+          <h3>Message Sent!</h3>
+          <p>Thank you for reaching out. We'll be in touch within 24–48 business hours.</p>
+          <p style="margin-top:12px;font-size:0.82rem;">Prefer to call? Reach us at <a href="tel:7324917038">(732) 491-7038</a></p>
+        </div>
+      </div><!-- /form -->
+
+    </div>
+  </div>
+</section>
+
+<!-- Map / Service Area Highlight -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Coverage</span>
+      <h2>Where We Work</h2>
+      <p>Licensed to practice as a Professional Engineer in five jurisdictions, with experience on projects across 10+ states.</p>
+    </div>
+    <div class="grid-4" style="margin-top:0;">
+      <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;box-shadow:var(--shadow);">
+        <div style="font-size:1.8rem;margin-bottom:12px;">🏛️</div>
+        <h4 style="color:var(--secondary);margin-bottom:6px;">Virginia</h4>
+        <p style="font-size:0.82rem;color:var(--text-light);">PE #040255312<br/>VDOT · WMATA<br/>Primary Office State</p>
+      </div>
+      <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;box-shadow:var(--shadow);">
+        <div style="font-size:1.8rem;margin-bottom:12px;">🦞</div>
+        <h4 style="color:var(--secondary);margin-bottom:6px;">Maryland</h4>
+        <p style="font-size:0.82rem;color:var(--text-light);">PE #32464<br/>MDSHA · WMATA<br/>Metro Region</p>
+      </div>
+      <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;box-shadow:var(--shadow);">
+        <div style="font-size:1.8rem;margin-bottom:12px;">🗽</div>
+        <h4 style="color:var(--secondary);margin-bottom:6px;">New York</h4>
+        <p style="font-size:0.82rem;color:var(--text-light);">PE #089243<br/>NYDOT · NYC MTA<br/>Port Authority</p>
+      </div>
+      <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;box-shadow:var(--shadow);">
+        <div style="font-size:1.8rem;margin-bottom:12px;">🌉</div>
+        <h4 style="color:var(--secondary);margin-bottom:6px;">New Jersey</h4>
+        <p style="font-size:0.82rem;color:var(--text-light);">PE #24GE04863600<br/>NJDOT · Port Authority<br/>Northeast Corridor</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px;padding:20px;background:var(--white);border-radius:var(--radius);border:1px solid var(--border);">
+      <p style="font-size:0.88rem;color:var(--text-light);">Also licensed in <strong>Washington, D.C.</strong> — Projects in other states considered with appropriate licensure coordination.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="polaris_logo.png" alt="Polaris Bridge Engineering"/></div>
+        <p class="footer-desc">Civil and structural engineering consulting specializing in bridge design, rehabilitation, load rating, and infrastructure projects across the Mid-Atlantic and Northeast.</p>
+        <a href="Polaris_Capability_Statement.pdf" class="btn btn-accent-outline" style="font-size:0.68rem;padding:8px 16px;" download>Download Capability Statement</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#bridge">Bridge Design</a></li>
+          <li><a href="services.html#inspection">Bridge Inspection</a></li>
+          <li><a href="services.html#structural">Structural Engineering</a></li>
+          <li><a href="services.html#construction">Shoring &amp; Jacking</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">📞 <a href="tel:7324917038">(732) 491-7038</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:pbengineering168@outlook.com">pbengineering168@outlook.com</a></div>
+        <div class="footer-contact-item" style="flex-direction:column;gap:4px;">
+          <span>📍 Service Area:</span>
+          <span>VA • MD • DC • NY • NJ</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2026 Polaris Bridge Engineering LLC. All rights reserved.</p>
+      <span class="footer-certs">Certified DBE/MBE — Virginia | PE Licensed: VA • MD • DC • NY • NJ</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  // Let the mailto action proceed, and show a success message
+  setTimeout(function() {
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }, 300);
+}
+</script>
+
+</body>
+</html>

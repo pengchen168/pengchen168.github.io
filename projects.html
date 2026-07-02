@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Projects | Polaris Bridge Engineering LLC</title>
+<meta name="description" content="Selected bridge and infrastructure engineering projects — WMATA, VDOT, NYDOT, NJDOT, TxDOT, and more."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link crossorigin="" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 28px;
+}
+.project-card { display: block; }
+.project-card[data-cat] { transition: opacity 0.3s, transform 0.3s; }
+.project-card.hidden { display: none; }
+</style>
+</head>
+<body class="page-offset">
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="polaris_logo.png" alt="Polaris Bridge Engineering LLC"/></a>
+    <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">☰</button>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-hero-label">Our Work</span>
+    <h1>Selected Projects</h1>
+    <p>A representative sample of bridge design, rehabilitation, inspection, and infrastructure projects completed across the United States.</p>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section class="section">
+  <div class="section-inner">
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects</button>
+      <button class="filter-btn" onclick="filterProjects('transit', this)">Transit &amp; Rail</button>
+      <button class="filter-btn" onclick="filterProjects('highway', this)">Highway Bridges</button>
+      <button class="filter-btn" onclick="filterProjects('rehab', this)">Rehabilitation</button>
+      <button class="filter-btn" onclick="filterProjects('inspection', this)">Inspection &amp; Load Rating</button>
+      <button class="filter-btn" onclick="filterProjects('structural', this)">Structural</button>
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
+
+      <!-- WMATA 162 Bridges -->
+      <div class="project-card" data-cat="transit inspection">
+        <img src="bridge_inspection.jpg" alt="WMATA Bridge Load Rating"/>
+        <div class="project-overlay">
+          <span class="project-cat">Transit · Inspection &amp; Load Rating</span>
+          <h3>WMATA — 162 Bridge Load Rating Program</h3>
+          <p>Project management for all WMATA aerial and pedestrian bridge load rating analyses and condition assessments for bridge asset management.</p>
+        </div>
+      </div>
+
+      <!-- WMATA J-Line -->
+      <div class="project-card" data-cat="transit rehab">
+        <img src="bridge_rehab.jpg" alt="WMATA J-Line Eisenhower Ave"/>
+        <div class="project-overlay">
+          <span class="project-cat">Transit · Bridge Rehabilitation</span>
+          <h3>WMATA J-Line — Eisenhower Ave Aerial Bridge</h3>
+          <p>0.8-mile steel bridge crossing I-495. Bearing replacement, jack &amp; blocking, steel section retrofit, joint replacement, painting.</p>
+        </div>
+      </div>
+
+      <!-- WMATA K-Line -->
+      <div class="project-card" data-cat="transit rehab">
+        <img src="bridge_design.jpg" alt="WMATA K-Line Bridges"/>
+        <div class="project-overlay">
+          <span class="project-cat">Transit · Bridge Rehabilitation</span>
+          <h3>WMATA K-Line — Bridges over Route 7</h3>
+          <p>Rehabilitation design for two bridges: bearing replacement, jack &amp; blocking, joint replacement, concrete patching and crack repairs.</p>
+        </div>
+      </div>
+
+      <!-- VDOT HRBT -->
+      <div class="project-card" data-cat="highway">
+        <img src="bridge_design.jpg" alt="VDOT I-64 Hampton Roads Bridge-Tunnel"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Major Infrastructure</span>
+          <h3>VDOT I-64 Hampton Roads Bridge-Tunnel Expansion</h3>
+          <p>3.5-mile new bridge-tunnel crossing parallel to existing HRBT. Trestle bridge design, sign structures, rehabilitation designs along 9-mile I-64 corridor.</p>
+        </div>
+      </div>
+
+      <!-- TDOT I-440 Nashville -->
+      <div class="project-card" data-cat="highway">
+        <img src="bridge_design.jpg" alt="TDOT I-440 Nashville Curved Bridge"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Bridge Design</span>
+          <h3>TDOT I-440 Nashville — Curved Steel Box Girder Ramp</h3>
+          <p>5-span, 1,035 ft long, 150 ft tall curved steel box girder ramp bridge. Steel girder design, erection stage analysis using MIDAS, pier and abutment design.</p>
+        </div>
+      </div>
+
+      <!-- VDOT NBIS Suffolk -->
+      <div class="project-card" data-cat="inspection">
+        <img src="bridge_inspection.jpg" alt="VDOT Bridge Inspection Suffolk"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Bridge Inspection</span>
+          <h3>VDOT NBIS Inspection — City of Suffolk, VA</h3>
+          <p>Structural inspection QC/QA for approximately 120 bridges and culverts in City of Suffolk, including steel, prestressed, and timber bridge types.</p>
+        </div>
+      </div>
+
+      <!-- VDOT Dominion Blvd -->
+      <div class="project-card" data-cat="highway inspection">
+        <img src="bridge_rehab.jpg" alt="VDOT Dominion Boulevard Bascule Bridge"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Inspection &amp; Rehabilitation</span>
+          <h3>VDOT Dominion Boulevard — Elizabeth River Bascule Bridge</h3>
+          <p>NBIS inspection and As-Built load rating for 9 bridges (~13,000 ft). Replacement of double leaf bascule bridge with high-level fixed bridge.</p>
+        </div>
+      </div>
+
+      <!-- NYDOT Gowanus -->
+      <div class="project-card" data-cat="highway rehab">
+        <img src="bridge_rehab.jpg" alt="NYDOT Gowanus Expressway Brooklyn"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Bridge Rehabilitation</span>
+          <h3>NYDOT Gowanus Expressway Rehabilitation, Brooklyn, NY</h3>
+          <p>12-mile viaduct steel bridge rehabilitation. Emergency repair designs, deck replacement, expansion joint diaphragm rehabilitation, load rating.</p>
+        </div>
+      </div>
+
+      <!-- NYDOT I-287 -->
+      <div class="project-card" data-cat="highway">
+        <img src="bridge_design.jpg" alt="NYDOT I-287 Westchester"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Bridge Design</span>
+          <h3>NYDOT I-287 (CWE) Interchange 8 — Westchester County, NY</h3>
+          <p>3 new bridges, 2 replacements, 3 rehabilitations, 2 structural extensions. Steel girder erection, culvert erection, temporary support towers, sheet pile.</p>
+        </div>
+      </div>
+
+      <!-- NYC MTA GCT -->
+      <div class="project-card" data-cat="transit structural">
+        <img src="commercial_support.jpg" alt="NYC MTA Grand Central Terminal"/>
+        <div class="project-overlay">
+          <span class="project-cat">Transit · Major Infrastructure</span>
+          <h3>NYC MTA-LIRR — New Grand Central Terminal Station</h3>
+          <p>3-level LIRR station in 1,200 ft underground cavern beneath Manhattan. Lead structural engineer for 90% design submission (East Side Access, Contract CM012).</p>
+        </div>
+      </div>
+
+      <!-- VDOT Route 189 -->
+      <div class="project-card" data-cat="highway">
+        <img src="bridge_design.jpg" alt="VDOT Route 189 Bridge"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Bridge Design</span>
+          <h3>VDOT Route 189 New Bridge Replacement</h3>
+          <p>798 ft long, 7-span prestressed concrete girder bridge. Design, construction plans, QC/QA, and shop drawing review for new highway bridge.</p>
+        </div>
+      </div>
+
+      <!-- VDOT I-64 Stonehouse Pkwy -->
+      <div class="project-card" data-cat="highway">
+        <img src="bridge_design.jpg" alt="VDOT I-64 Stonehouse Parkway"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Bridge Design</span>
+          <h3>VDOT I-64 Stonehouse Parkway Bridge — James City County, VA</h3>
+          <p>400 ft, 3-span continuous steel plate girder bridge with composite concrete deck on wall-type abutments and cap &amp; column piers on pipe piles.</p>
+        </div>
+      </div>
+
+      <!-- TxDOT Southern Gateway -->
+      <div class="project-card" data-cat="highway">
+        <img src="bridge_design.jpg" alt="TxDOT Southern Gateway Dallas"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Bridge Design</span>
+          <h3>TxDOT Southern Gateway Design-Build — Dallas, TX</h3>
+          <p>11-mile I-35E corridor improvements. Bridge 13, 15 and 16 substructure designs and formal QC/QA design check.</p>
+        </div>
+      </div>
+
+      <!-- NJDOT Washington Ave Bridge -->
+      <div class="project-card" data-cat="highway">
+        <img src="bridge_rehab.jpg" alt="NJDOT Washington Ave Bridge"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Bridge Design</span>
+          <h3>NJDOT Washington Ave Bridge Replacement — Somerset County, NJ</h3>
+          <p>87 ft × 62 ft, 2-span bridge with 20 adjacent PSC voided slab beams. Inspection, slab beam design, load rating, construction plans, traffic detour.</p>
+        </div>
+      </div>
+
+      <!-- Port Authority Airports -->
+      <div class="project-card" data-cat="inspection structural">
+        <img src="bridge_inspection.jpg" alt="Port Authority Airport Inspections"/>
+        <div class="project-overlay">
+          <span class="project-cat">Structural · Facility Inspection</span>
+          <h3>Port Authority NY &amp; NJ — Airport Facility Inspections</h3>
+          <p>Team leader for structural inspections at JFK, LGA, and Newark airports — garages, terminal buildings, hangers, high mast light towers, and port terminals.</p>
+        </div>
+      </div>
+
+      <!-- ODOT I-75 -->
+      <div class="project-card" data-cat="highway">
+        <img src="bridge_design.jpg" alt="ODOT I-75 Bridge Design"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Bridge Design</span>
+          <h3>ODOT I-75 Main Line &amp; Ramp Bridge Designs — District 8, OH</h3>
+          <p>Multiple I-75 bridge designs including main line steel plate girder bridge (130 ft, 45° skew) and 3-span curved ramp bridge (340 ft). Pier, abutment, and pile design.</p>
+        </div>
+      </div>
+
+      <!-- VDOT Route 17 -->
+      <div class="project-card" data-cat="inspection highway">
+        <img src="bridge_load_rating.png" alt="VDOT Route 17 Load Rating"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Load Rating</span>
+          <h3>VDOT Route 17 over Western Branch Elizabeth River</h3>
+          <p>Final design load rating check for 1,990 ft, 24-span, 4-unit prestressed concrete girder bridge. Reinforcing detail and schedule QC review.</p>
+        </div>
+      </div>
+
+      <!-- NJDOT Canal Street -->
+      <div class="project-card" data-cat="highway structural">
+        <img src="retaining_wall.jpg" alt="NJDOT Canal Street Culvert"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Culvert Design</span>
+          <h3>NJDOT Canal Street Bridge — Morris County, NJ</h3>
+          <p>Twin-cell precast culvert, 40 ft × 30 ft, comprising 8 adjacent precast box culverts. Full design, construction plans, hydraulic analysis, permits, and environmental review.</p>
+        </div>
+      </div>
+
+    </div><!-- /projects-grid -->
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Have a Similar Project?</h2>
+  <p>Contact us to discuss your bridge or infrastructure engineering needs — we respond within 24–48 hours.</p>
+  <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="polaris_logo.png" alt="Polaris Bridge Engineering"/></div>
+        <p class="footer-desc">Civil and structural engineering consulting specializing in bridge design, rehabilitation, load rating, and infrastructure projects across the Mid-Atlantic and Northeast.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#bridge">Bridge Design</a></li>
+          <li><a href="services.html#inspection">Bridge Inspection</a></li>
+          <li><a href="services.html#structural">Structural Engineering</a></li>
+          <li><a href="services.html#construction">Shoring &amp; Jacking</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">📞 <a href="tel:7324917038">(732) 491-7038</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:pbengineering168@outlook.com">pbengineering168@outlook.com</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2026 Polaris Bridge Engineering LLC. All rights reserved.</p>
+      <span class="footer-certs">Certified DBE/MBE — Virginia | PE Licensed: VA • MD • DC • NY • NJ</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function filterProjects(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.project-card').forEach(card => {
+    const cats = card.dataset.cat || '';
+    if (cat === 'all' || cats.includes(cat)) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+}
+</script>
+
+</body>
+</html>
