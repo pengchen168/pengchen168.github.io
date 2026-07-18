@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- POLARIS ABOUT FINAL UPDATE 2026-07-18: principal profile and four-line desktop introduction. -->
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -30,6 +31,10 @@
   line-height: 1.7;
 }
 
+.about-hero-copy span {
+  display: block;
+}
+
 .nav-logo img {
   width: auto;
   height: 62px;
@@ -52,6 +57,14 @@
 }
 
 @media (max-width: 600px) {
+  .about-hero-copy span {
+    display: inline;
+  }
+
+  .about-hero-copy span:not(:last-child)::after {
+    content: " ";
+  }
+
   .nav-logo img {
     height: 50px;
   }
@@ -84,7 +97,7 @@
   <div class="page-hero-inner">
     <span class="page-hero-label">Our Principal</span>
     <h1>About Polaris</h1>
-    <p>Polaris Bridge Engineering LLC is a specialized civil and structural engineering consulting firm led by Peng Chen, P.E. The firm provides principal-led bridge design, rehabilitation, inspection, load rating, structural assessment, temporary works, and construction engineering support to prime consultants, contractors, and public owners.</p>
+    <p class="about-hero-copy"><span>Polaris Bridge Engineering LLC is a specialized civil and structural</span><span>engineering consulting firm led by Peng Chen, P.E. The firm provides</span><span>principal-led bridge design, rehabilitation, inspection, load rating, structural assessment,</span><span>temporary works, and construction engineering support to prime consultants, contractors, and public owners.</span></p>
   </div>
 </section>
 

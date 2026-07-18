@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- POLARIS PROJECTS FINAL UPDATE 2026-07-18: all project-card badges removed; heading fixed to two lines. -->
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -20,18 +21,22 @@
 .project-card.hidden { display: none; }
 
 .page-hero-inner {
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 .page-hero h1 {
-  max-width: none;
-  font-size: clamp(2rem, 3.15vw, 3.35rem);
-  white-space: nowrap;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(2.15rem, 3.6vw, 3.2rem);
+  line-height: 1.15;
+  white-space: normal;
 }
 
 .projects-intro {
-  max-width: 1120px;
+  max-width: 880px;
   margin: 0 auto 24px;
+  font-size: 1.05rem;
   line-height: 1.7;
 }
 
@@ -55,35 +60,6 @@
   font-size: 0.68rem;
   line-height: 1.55;
   text-align: left;
-}
-
-.experience-badge {
-  display: inline-block;
-  margin: 0 0 9px;
-  padding: 5px 9px;
-  border-radius: 3px;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.055em;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-.experience-badge.polaris {
-  color: #175c3c;
-  background: #dff3e7;
-}
-
-.experience-badge.principal {
-  color: #123f67;
-  background: #eaf4fa;
-}
-
-@media (max-width: 900px) {
-  .page-hero h1 {
-    white-space: normal;
-  }
 }
 
 @media (max-width: 600px) {
@@ -122,7 +98,7 @@
 <section class="page-hero">
   <div class="page-hero-inner">
     <span class="page-hero-label">Our Work</span>
-    <h1>Selected Bridge and Structural Engineering Experience</h1>
+    <h1>Selected Bridge and Structural<br/>Engineering Experience</h1>
     <p class="projects-intro">Polaris provides principal-led bridge and structural engineering informed by more than 20 years of experience across highway, rail, transit, airport, and facility projects. The examples below distinguish assignments delivered directly by Polaris from representative experience Peng Chen, P.E. gained throughout his professional career.</p>
   </div>
 </section>
@@ -146,7 +122,6 @@
       <div class="project-card" data-cat="highway">
         <img src="VDOT%20bridge_design%20Project.jpg" alt="VDOT Bridge Design"/>
         <div class="project-overlay">
-          <span class="experience-badge principal">Principal Experience Before Polaris</span>
           <span class="project-cat">Highway · Bridge Design</span>
           <h3>VDOT Bridge Design</h3>
           <p>New bridge design and replacement projects for VDOT — steel plate girder bridges, prestressed concrete girder bridges, abutments, piers, pile foundations, and culvert structures. Design developed in compliance with AASHTO LRFD and VDOT standards.</p>
@@ -157,7 +132,6 @@
       <div class="project-card" data-cat="highway">
         <img src="VDOT%20On-Call%20bridge_rehab.jpg" alt="VDOT On-Call Bridge Rehabilitation"/>
         <div class="project-overlay">
-          <span class="experience-badge principal">Principal Experience Before Polaris</span>
           <span class="project-cat">Highway · Bridge Rehabilitation</span>
           <h3>VDOT On-Call Bridge Rehabilitation</h3>
           <p>On-call bridge rehabilitation design services for VDOT — bearing replacement, expansion joint replacement, deck rehabilitation, steel section repair, concrete patching, and full construction plan packages across multiple Virginia districts.</p>
@@ -168,7 +142,6 @@
       <div class="project-card" data-cat="inspection highway">
         <img src="VDOT%20bridge_inspection%20Project.jpg" alt="VDOT Bridge Inspection"/>
         <div class="project-overlay">
-          <span class="experience-badge principal">Principal Experience Before Polaris</span>
           <span class="project-cat">Highway · NBIS Inspection &amp; Load Rating</span>
           <h3>VDOT Bridge Inspection &amp; Load Rating</h3>
           <p>NBIS structural inspections and LRFR/LFR load rating analyses for VDOT bridges — steel, prestressed concrete, timber, and culvert structures. Includes load rating reports, condition assessments, and posting evaluations per AASHTO MBE using AASHTO BrR software.</p>
@@ -179,7 +152,6 @@
       <div class="project-card" data-cat="highway">
         <img src="VDOT%20HRBT%20Project%20Photo.jpg" alt="VDOT HRBT Extension Project"/>
         <div class="project-overlay">
-          <span class="experience-badge principal">Principal Experience Before Polaris</span>
           <span class="project-cat">Highway · Major Infrastructure</span>
           <h3>VDOT HRBT Extension — Trestle Bridge Design</h3>
           <p>3.5-mile new bridge-tunnel expansion parallel to the existing Hampton Roads Bridge-Tunnel on I-64. Trestle bridge superstructure and substructure design, sign structure design, and rehabilitation engineering along the 9-mile corridor.</p>
@@ -190,7 +162,6 @@
       <div class="project-card" data-cat="transit structural">
         <img src="NYC%20MTA-LIRR%20%E2%80%94%20New%20Grand%20Central%20Terminal%20Station%20Poject%20Photo.webp" alt="NYC MTA-LIRR New Grand Central Terminal Station"/>
         <div class="project-overlay">
-          <span class="experience-badge principal">Principal Experience Before Polaris</span>
           <span class="project-cat">Transit · Major Infrastructure</span>
           <h3>NYC MTA-LIRR — New Grand Central Terminal Station</h3>
           <p>Lead structural engineer for the 90% design submission of a new 3-level LIRR station in a 1,200 ft underground cavern beneath Midtown Manhattan (East Side Access, Contract CM012) — one of the largest transit infrastructure projects in U.S. history.</p>
@@ -201,7 +172,6 @@
       <div class="project-card" data-cat="inspection structural">
         <img src="JFK%20EWR%20LaGuardia%20%E2%80%94%20Airport%20Terminal%20%26%20Parking%20Structure%20Inspection.jpg" alt="Port Authority Airport Inspection"/>
         <div class="project-overlay">
-          <span class="experience-badge principal">Principal Experience Before Polaris</span>
           <span class="project-cat">Structural · Facility Inspection</span>
           <h3>JFK / EWR / LaGuardia — Port Authority NY&amp;NJ Airport Inspections</h3>
           <p>Team leader for structural inspections at John F. Kennedy, Newark Liberty, and LaGuardia airports — terminal buildings, parking garages, hangars, high mast light towers, and port facility structures for the Port Authority of NY &amp; NJ.</p>
@@ -212,7 +182,6 @@
       <div class="project-card" data-cat="structural">
         <img src="Comercial%20Building%20Project_steel_joist_design%20check.jpg" alt="Commercial Building Structural Evaluation"/>
         <div class="project-overlay">
-          <span class="experience-badge polaris">Polaris Assignment</span>
           <span class="project-cat">Structural · Building Engineering</span>
           <h3>Commercial Building Structural Design &amp; Evaluation</h3>
           <p>Structural design and evaluation of commercial building systems — framing assessments, condition surveys, code compliance reviews per IBC/AISC/ACI, and engineering reports with repair and remediation recommendations for building owners and facility managers.</p>
@@ -223,7 +192,6 @@
       <div class="project-card" data-cat="structural">
         <img src="Roof%20TOP%20RTU%20Engineering%20project.jpg" alt="Rooftop RTU Structural Engineering"/>
         <div class="project-overlay">
-          <span class="experience-badge polaris">Polaris Assignment</span>
           <span class="project-cat">Structural · Building Engineering</span>
           <h3>Rooftop RTU Structural Evaluation &amp; Design Support</h3>
           <p>Structural evaluation and design for rooftop mechanical equipment support — RTU framing, steel dunnage design, existing roof framing capacity checks per ASCE-7, AISC, and IBC, with full stamped engineering drawings for permit submission.</p>
@@ -234,7 +202,6 @@
       <div class="project-card" data-cat="highway structural">
         <img src="Temproary%20Bearing%20Replacment%20shoring_jacking.jpg" alt="Temporary Jacking Bridge Design"/>
         <div class="project-overlay">
-          <span class="experience-badge principal">Principal Experience Before Polaris</span>
           <span class="project-cat">Highway · Construction Engineering</span>
           <h3>Temporary Jacking &amp; Shoring — Bridge Bearing Replacement</h3>
           <p>Specialized temporary works design for bridge bearing replacement operations — jack and blocking plans, temporary shoring design, staged construction sequencing, and load path analysis to safely support bridge superstructures during bearing removal and installation.</p>
