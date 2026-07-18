@@ -1,237 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Services | Polaris Bridge Engineering LLC</title>
-<meta name="description" content="Bridge design, rehabilitation, load rating, NBIS inspection, structural engineering, retaining walls, shoring and construction support services."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link crossorigin="" href="https://fonts.gstatic.com"/>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bridge Design, Load Rating &amp; Construction Engineering Services</title>
+<meta name="description" content="Bridge design, rehabilitation, load rating, inspection support, temporary works, structural assessment, and construction engineering by Polaris Bridge Engineering.">
+<link rel="canonical" href="https://www.polarisbridgeengineering.com/services.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Polaris Bridge Engineering LLC">
+<meta property="og:title" content="Bridge Design, Load Rating &amp; Construction Engineering Services">
+<meta property="og:description" content="Bridge design, rehabilitation, load rating, inspection support, temporary works, structural assessment, and construction engineering by Polaris Bridge Engineering.">
+<meta property="og:url" content="https://www.polarisbridgeengineering.com/services.html">
+<meta property="og:image" content="https://www.polarisbridgeengineering.com/polaris_logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="page-offset">
+<body>
 
-<!-- Navigation -->
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo"><img src="polaris_logo.png" alt="Polaris Bridge Engineering LLC"/></a>
-    <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">☰</button>
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html" class="nav-cta">Contact</a></li>
-    </ul>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="polaris_logo.png" alt="Polaris Bridge Engineering LLC logo">
+      <span class="brand-name">Polaris Bridge Engineering LLC
+        <small>Bridge · Structural · Infrastructure</small>
+      </span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">☰</label>
+    <nav class="primary" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" aria-current="page">Services</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="teaming.html">Teaming &amp; Qualifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </div>
-</nav>
+</header>
 
-<!-- Page Hero -->
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <span class="page-hero-label">What We Offer</span>
-    <h1>Engineering Services</h1>
-    <p>Comprehensive bridge and structural engineering consulting — from design and inspection to rehabilitation and construction support.</p>
-  </div>
-</section>
-
-<!-- Quick Nav -->
-<div style="background:var(--light);border-bottom:1px solid var(--border);padding:16px 32px;">
-  <div style="max-width:1200px;margin:0 auto;display:flex;gap:24px;flex-wrap:wrap;">
-    <a href="#bridge" style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--secondary);transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--secondary)'">Bridge Engineering →</a>
-    <a href="#structural" style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--secondary);transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--secondary)'">Structural Engineering →</a>
-    <a href="#inspection" style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--secondary);transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--secondary)'">Inspection &amp; Load Rating →</a>
-    <a href="#construction" style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--secondary);transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--secondary)'">Construction Support →</a>
-    <a href="#commercial" style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--secondary);transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--secondary)'">Commercial Building →</a>
-  </div>
-</div>
-
-<!-- Bridge Engineering -->
-<div id="bridge" class="service-block">
-  <img src="bridge_design.jpg" alt="Bridge Design" class="service-block-img"/>
-  <div class="service-block-content">
-    <span class="section-label">Bridge Engineering</span>
-    <h2>Bridge Design &amp; Rehabilitation</h2>
-    <p>With 20+ years of experience in all phases of highway and railroad bridge engineering, Polaris provides design and analysis support for new bridges, widenings, and complex rehabilitation projects. Our work covers steel, prestressed concrete, and cast-in-place concrete structures.</p>
-    <ul class="service-list">
-      <li>New bridge design — steel plate girders, PSC girders, box culverts, rigid frame culverts</li>
-      <li>Bridge widening and stage construction engineering</li>
-      <li>Rehabilitation design — deck replacement, bearing replacement, joint replacement</li>
-      <li>Steel section retrofit, painting, concrete patching and crack repair</li>
-      <li>Abutment, pier, footing, and pile foundation design</li>
-      <li>Substructure design — wall-type abutments, cap &amp; column piers, hammerhead piers</li>
-      <li>Curved and skewed bridge analysis (MIDAS, CSI Bridge, MDX, DESCUS)</li>
-      <li>Shop drawing review and construction phase engineering support</li>
-    </ul>
-    <a href="contact.html" class="btn btn-primary">Request This Service</a>
-  </div>
-</div>
-
-<div style="background:var(--light);">
-<!-- Inspection & Load Rating -->
-<div id="inspection" class="service-block" style="background:var(--light);">
-  <div class="service-block-content">
-    <span class="section-label">Inspection &amp; Load Rating</span>
-    <h2>NBIS Bridge Inspection &amp; Load Rating</h2>
-    <p>Certified FHWA NBIS Safety Inspector with extensive field inspection and load rating experience across state DOT and transit agency bridge inventories. Polaris provides thorough inspection programs with clear, well-documented deliverables.</p>
-    <ul class="service-list">
-      <li>NBIS bridge safety inspections — steel, concrete, timber, and culvert structures</li>
-      <li>Routine, fracture-critical, and underwater bridge inspection</li>
-      <li>LRFR and LFR load rating analyses per AASHTO MBE</li>
-      <li>Load rating reports and documentation (AASHTO BrR software)</li>
-      <li>Bridge condition assessment and prioritization studies</li>
-      <li>As-built load rating for new construction projects</li>
-      <li>AREMA load rating for railroad bridge structures</li>
-      <li>Posting evaluation and overweight vehicle permit review</li>
-    </ul>
-    <a href="contact.html" class="btn btn-primary">Request This Service</a>
-  </div>
-  <img src="bridge_inspection.jpg" alt="Bridge Inspection" class="service-block-img"/>
-</div>
-</div>
-
-<!-- Structural Engineering -->
-<div id="structural" class="service-block">
-  <img src="retaining_wall.jpg" alt="Retaining Wall Design" class="service-block-img"/>
-  <div class="service-block-content">
-    <span class="section-label">Structural Engineering</span>
-    <h2>Structural &amp; Geotechnical Design</h2>
-    <p>Beyond bridges, Polaris provides structural engineering support for transportation-related infrastructure, commercial buildings, and site structures. All designs are code-compliant with ASCE-7, ACI, AISC, and IBC standards.</p>
-    <ul class="service-list">
-      <li>Retaining wall design — cantilever, MSE, soldier pile with lagging, sheet piles</li>
-      <li>Commercial rooftop RTU / equipment support framing</li>
-      <li>Building structural modifications and tenant improvements</li>
-      <li>Foundation design — drilled shafts, driven piles, spread footings</li>
-      <li>Highway sign structure design and mast arm signal structures</li>
-      <li>Noise wall design and replacement</li>
-      <li>Parking structure inspection and repair design</li>
-      <li>Airport facility structural inspections</li>
-    </ul>
-    <a href="contact.html" class="btn btn-primary">Request This Service</a>
-  </div>
-</div>
-
-<div style="background:var(--light);">
-<!-- Construction Support -->
-<div id="construction" class="service-block" style="background:var(--light);">
-  <div class="service-block-content">
-    <span class="section-label">Construction Engineering</span>
-    <h2>Shoring, Jacking &amp; Construction Support</h2>
-    <p>Polaris provides specialized temporary works design and construction engineering support — helping contractors safely execute complex staged construction operations on bridge and infrastructure projects.</p>
-    <ul class="service-list">
-      <li>Temporary shoring design — up to 30+ feet retained height</li>
-      <li>Bridge jacking and blocking plans for bearing replacement</li>
-      <li>Staged construction engineering and erection analysis</li>
-      <li>Temporary support towers and falsework design</li>
-      <li>MIDAS bridge erection stage analysis</li>
-      <li>Jumper span design for temporary track shifts</li>
-      <li>Constructability reviews and value engineering</li>
-      <li>QC/QA plan development and construction plan review</li>
-    </ul>
-    <a href="contact.html" class="btn btn-primary">Request This Service</a>
-  </div>
-  <img src="shoring_jacking.jpg" alt="Shoring and Bridge Jacking" class="service-block-img"/>
-</div>
-</div>
-
-<!-- Commercial Building -->
-<div id="commercial" class="service-block">
-  <img src="Comercial%20Building%20Project_steel_joist_design%20check.jpg" alt="Commercial Building Structural Engineering" class="service-block-img"/>
-  <div class="service-block-content">
-    <span class="section-label">Building Engineering</span>
-    <h2>Commercial Building Design &amp; Engineering Evaluation</h2>
-    <p>Beyond transportation infrastructure, Polaris provides structural engineering design and evaluation services for commercial buildings and facilities. With a background spanning transit stations, airport terminals, and parking structures, we bring a rigorous, code-compliant approach to commercial building challenges.</p>
-    <ul class="service-list">
-      <li>Structural evaluation and condition assessment of existing commercial buildings</li>
-      <li>Steel framing design — beams, columns, connections per AISC</li>
-      <li>Rooftop RTU and mechanical equipment support framing design</li>
-      <li>Steel joist and roof deck capacity checks and upgrade design</li>
-      <li>Structural modification design for tenant improvements and renovations</li>
-      <li>Foundation evaluation, underpinning, and repair design</li>
-      <li>Building structural inspection and engineering reports</li>
-      <li>Parking garage structural inspection and repair engineering</li>
-    </ul>
-    <a href="contact.html" class="btn btn-primary">Request This Service</a>
-  </div>
-</div>
-
-<!-- Design Standards -->
-<section class="section section-dark">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="section-label" style="color:var(--accent)">Standards &amp; Codes</span>
-      <h2 style="color:var(--white)">Design Standards We Work With</h2>
-      <p style="color:rgba(255,255,255,0.6)">All Polaris deliverables are developed in compliance with applicable federal and state design codes.</p>
+<section class="block">
+  <div class="wrap">
+    <div class="sheet-head">
+      <span class="sheet-code">S-200 / Services</span>
+      <h1>Bridge and Structural Engineering Services</h1>
+      <hr class="sheet-rule">
+      <p class="sub">Polaris Bridge Engineering LLC provides focused engineering support for transportation infrastructure, bridge programs, design-build teams, contractors, and facility owners. Services can be delivered as a defined task, a subconsultant assignment, supplemental project capacity, or construction-phase support.</p>
     </div>
-    <div class="grid-4">
-      <div style="text-align:center;padding:24px;background:rgba(255,255,255,0.05);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.1);">
-        <div style="font-size:2rem;margin-bottom:12px;">📐</div>
-        <h4 style="color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;">Bridge</h4>
-        <p style="color:rgba(255,255,255,0.65);font-size:0.85rem;">AASHTO LRFD<br/>AASHTO MBE<br/>AREMA<br/>FHWA NBIS</p>
-      </div>
-      <div style="text-align:center;padding:24px;background:rgba(255,255,255,0.05);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.1);">
-        <div style="font-size:2rem;margin-bottom:12px;">🏗️</div>
-        <h4 style="color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;">Structural</h4>
-        <p style="color:rgba(255,255,255,0.65);font-size:0.85rem;">AISC Steel<br/>ACI 318 Concrete<br/>ASCE-7 Loading<br/>IBC Building Code</p>
-      </div>
-      <div style="text-align:center;padding:24px;background:rgba(255,255,255,0.05);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.1);">
-        <div style="font-size:2rem;margin-bottom:12px;">🗺️</div>
-        <h4 style="color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;">State DOTs</h4>
-        <p style="color:rgba(255,255,255,0.65);font-size:0.85rem;">VDOT • MDSHA<br/>NYDOT • NJDOT<br/>ODOT • TDOT<br/>TxDOT • FDOT</p>
-      </div>
-      <div style="text-align:center;padding:24px;background:rgba(255,255,255,0.05);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.1);">
-        <div style="font-size:2rem;margin-bottom:12px;">💻</div>
-        <h4 style="color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;">Software</h4>
-        <p style="color:rgba(255,255,255,0.65);font-size:0.85rem;">MIDAS • CSI Bridge<br/>AASHTO BrR<br/>SAP2000 • STAAD<br/>ENERCALC • MDX</p>
-      </div>
+
+    <div class="prose" id="design">
+      <h2>Bridge Design &amp; Rehabilitation</h2>
+      <p>Polaris provides analysis, design, and plan-development support for new bridges, replacements, widenings, and rehabilitation projects. Experience includes steel plate girder, prestressed concrete girder, continuous composite, cast-in-place concrete, culvert, substructure, and foundation systems.</p>
+      <h3>Typical assignments</h3>
+      <ul>
+        <li>New bridge, replacement, and widening design</li>
+        <li>Bridge rehabilitation and retrofit design</li>
+        <li>Deck, bearing, and expansion-joint replacement</li>
+        <li>Steel section repair and strengthening</li>
+        <li>Concrete repair, crack repair, and durability improvements</li>
+        <li>Abutment, pier, footing, pile, and drilled-shaft design</li>
+        <li>Curved, skewed, staged, and continuous bridge analysis</li>
+        <li>Design calculations, plan development, specifications, quantity support, and independent technical review</li>
+      </ul>
+      <p class="standards">Applicable standards include AASHTO LRFD Bridge Design Specifications, owner criteria, and state DOT manuals.</p>
+    </div>
+
+    <div class="prose" id="rating">
+      <h2>Load Rating &amp; Inspection Support</h2>
+      <p>Polaris supports bridge owners and prime consultants with load-rating analysis, inspection-related engineering, and condition assessment. Deliverables are organized to be traceable, reviewable, and consistent with owner procedures.</p>
+      <h3>Typical assignments</h3>
+      <ul>
+        <li>LRFR and LFR load-rating analysis</li>
+        <li>AASHTOWare Bridge Rating (BrR) modeling and documentation</li>
+        <li>As-built or inventory load-rating updates</li>
+        <li>Posting evaluation and special-vehicle review</li>
+        <li>Bridge condition assessment and repair prioritization</li>
+        <li>Inspection team-leader or engineering support, subject to project staffing requirements</li>
+        <li>Railroad bridge evaluation using AREMA criteria</li>
+        <li>Independent load-rating review and quality-control support</li>
+      </ul>
+      <p class="standards">Applicable standards include AASHTO Manual for Bridge Evaluation, NBIS requirements, AREMA criteria, and owner-specific procedures.</p>
+    </div>
+
+    <div class="prose" id="construction">
+      <h2>Construction Engineering &amp; Temporary Works</h2>
+      <p>Polaris helps contractors and design-build teams plan and execute complex bridge construction activities by evaluating load paths, temporary conditions, staged operations, and constructability.</p>
+      <h3>Typical assignments</h3>
+      <ul>
+        <li>Bridge jacking, blocking, and bearing-replacement support</li>
+        <li>Temporary shoring, support towers, falsework, and temporary framing</li>
+        <li>Erection-stage and staged-construction analysis</li>
+        <li>Constructability review and value-engineering support</li>
+        <li>Shop drawing, working drawing, and submittal review</li>
+        <li>Field-condition evaluation and repair-detail development</li>
+        <li>Construction sequencing and temporary load-path assessment</li>
+        <li>Construction-phase responses and design clarification</li>
+      </ul>
+      <p class="standards">Construction-engineering scopes are developed around the contractor's means, methods, sequence, equipment, access, and project-specific safety requirements.</p>
+    </div>
+
+    <div class="prose" id="assessment">
+      <h2>Structural Assessment &amp; Facility Engineering</h2>
+      <p>Polaris applies bridge-level structural judgment to transportation facilities, commercial buildings, and site structures where existing conditions, modifications, or repair needs require focused engineering evaluation.</p>
+      <h3>Typical assignments</h3>
+      <ul>
+        <li>Structural condition assessments and engineering reports</li>
+        <li>Steel, concrete, and foundation repair recommendations</li>
+        <li>Rooftop equipment support framing and existing-roof capacity checks</li>
+        <li>Structural modifications for renovations and tenant improvements</li>
+        <li>Retaining walls, site structures, and transportation-related facilities</li>
+        <li>Parking structure and airport facility assessment support</li>
+        <li>Damage assessment, cause evaluation, and repair design</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-banner">
-  <h2>Ready to Discuss Your Project?</h2>
-  <p>Tell us about your project — we'll respond within 24–48 hours with a scope and fee proposal.</p>
-  <a href="contact.html" class="btn btn-primary">Contact Us Today</a>
+<section class="block alt">
+  <div class="wrap">
+    <div class="sheet-head">
+      <span class="sheet-code">S-201 / Engagement</span>
+      <h2>How Polaris Can Support Your Team</h2>
+      <hr class="sheet-rule">
+    </div>
+    <div class="feature-list">
+      <p><strong>Defined technical scope.</strong> A focused calculation, design package, assessment, or repair assignment.</p>
+      <p><strong>Subconsultant task support.</strong> A clearly bounded discipline role under a prime consultant's contract.</p>
+      <p><strong>Supplemental capacity.</strong> Senior engineering support during peak production, review, or construction periods.</p>
+      <p><strong>Independent review.</strong> A practical second look at calculations, plans, constructability, or technical risk.</p>
+    </div>
+  </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="footer-inner">
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Tell us what needs to be designed, evaluated, reviewed, or supported — and when you need it.</h2>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="contact.html">Discuss Your Scope</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
     <div class="footer-grid">
       <div>
-        <div class="footer-logo"><img src="polaris_logo.png" alt="Polaris Bridge Engineering"/></div>
-        <p class="footer-desc">Civil and structural engineering consulting specializing in bridge design, rehabilitation, load rating, and infrastructure projects across the Mid-Atlantic and Northeast.</p>
+        <h4>Polaris Bridge Engineering LLC</h4>
+        <p>Principal-led bridge design, rehabilitation, load rating, inspection support, structural assessment, and construction engineering for transportation agencies, prime consultants, contractors, and facility owners.</p>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Navigation</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
+          <li><a href="experience.html">Experience</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="teaming.html">Teaming &amp; Qualifications</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Services</h4>
         <ul>
-          <li><a href="#bridge">Bridge Design</a></li>
-          <li><a href="#inspection">Bridge Inspection</a></li>
-          <li><a href="#structural">Structural Engineering</a></li>
-          <li><a href="#construction">Shoring &amp; Jacking</a></li>
+          <li><a href="services.html#design">Bridge Design &amp; Rehabilitation</a></li>
+          <li><a href="services.html#rating">Load Rating &amp; Inspection</a></li>
+          <li><a href="services.html#construction">Construction Engineering</a></li>
+          <li><a href="services.html#assessment">Structural Assessment</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Contact</h4>
-        <div class="footer-contact-item">📞 <a href="tel:7324917038">(732) 491-7038</a></div>
-        <div class="footer-contact-item">✉️ <a href="mailto:info@polarisbridgeengineering.com">info@polarisbridgeengineering.com</a></div>
+        <ul>
+          <li><a href="mailto:info@polarisbridgeengineering.com">info@polarisbridgeengineering.com</a></li>
+          <li><a href="tel:+17324917038">732-491-7038</a></li>
+          <li>Based in Northern Virginia</li>
+          <li><a href="Polaris_Capability_Statement.pdf">Capability Statement (PDF)</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-copyright">© 2026 Polaris Bridge Engineering LLC. All rights reserved.</p>
-      <span class="footer-certs">Certified DBE/MBE — Virginia | PE Licensed: VA • MD • DC • NY • NJ</span>
+    <div class="footer-legal">
+      <span>© 2026 Polaris Bridge Engineering LLC. All rights reserved.</span>
+      <span>Virginia-Certified DBE/MBE Firm | PE Licensed: VA • MD • DC • NY • NJ</span>
     </div>
   </div>
 </footer>

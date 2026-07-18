@@ -1,436 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Polaris Bridge Engineering &amp; Consulting, LLC | Structural &amp; Bridge Engineering</title>
-<meta name="description" content="Polaris Bridge Engineering & Consulting, LLC — Licensed PE providing bridge design, rehabilitation, load rating, inspection, and structural engineering across VA, MD, DC, NY, and NJ."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link crossorigin="" href="https://fonts.gstatic.com"/>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css"/>
-<style>
-/* ---- HERO SLIDESHOW ---- */
-.hero {
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bridge Engineering Consultant | Polaris Bridge Engineering</title>
+<meta name="description" content="Principal-led bridge design, rehabilitation, load rating, inspection support, and construction engineering for public infrastructure projects and teaming partners.">
+<link rel="canonical" href="https://www.polarisbridgeengineering.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Polaris Bridge Engineering LLC">
+<meta property="og:title" content="Bridge Engineering Consultant | Polaris Bridge Engineering">
+<meta property="og:description" content="Principal-led bridge design, rehabilitation, load rating, inspection support, and construction engineering for public infrastructure projects and teaming partners.">
+<meta property="og:url" content="https://www.polarisbridgeengineering.com/">
+<meta property="og:image" content="https://www.polarisbridgeengineering.com/polaris_logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Polaris Bridge Engineering LLC",
+  "legalName": "Polaris Bridge Engineering LLC",
+  "url": "https://www.polarisbridgeengineering.com/",
+  "logo": "https://www.polarisbridgeengineering.com/polaris_logo.png",
+  "email": "info@polarisbridgeengineering.com",
+  "telephone": "+1-732-491-7038",
+  "founder": {
+    "@type": "Person",
+    "name": "Peng Chen",
+    "honorificSuffix": "P.E.",
+    "jobTitle": "Founder and Principal"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "VA",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Virginia", "Maryland", "District of Columbia", "New York", "New Jersey"],
+  "description": "Principal-led bridge design, rehabilitation, load rating, inspection support, structural assessment, and construction engineering for transportation agencies, prime consultants, and contractors.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Project and teaming inquiries",
+    "email": "info@polarisbridgeengineering.com",
+    "telephone": "+1-732-491-7038"
+  }
 }
-.slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1.4s ease-in-out;
-}
-.slide.active { opacity: 1; }
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(160deg, rgba(10,18,28,0.78) 0%, rgba(26,35,50,0.62) 100%);
-  z-index: 1;
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 120px 32px 60px;
-  max-width: 900px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.hero-logo {
-  display: block;
-  width: 140px;
-  height: auto;
-  margin: 0 auto 24px;
-  filter: drop-shadow(0 2px 16px rgba(0,0,0,0.6));
-  background: rgba(255,255,255,0.92);
-  border-radius: 12px;
-  padding: 10px;
-}
-.hero-company {
-  font-family: 'Crimson Pro', serif;
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  font-weight: 600;
-  color: var(--white);
-  letter-spacing: 0.01em;
-  margin-bottom: 12px;
-  line-height: 1.2;
-}
-.hero-tagline {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: clamp(0.65rem, 1.4vw, 0.82rem);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 32px;
-}
-.hero-divider {
-  width: 60px;
-  height: 2px;
-  background: var(--accent);
-  margin: 0 auto 32px;
-}
-.hero-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 40px;
-}
-.hero-contact a {
-  color: rgba(255,255,255,0.88);
-  font-size: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.hero-contact a:hover { color: var(--accent); }
-.hero-contact .hero-phone {
-  font-family: 'Crimson Pro', serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--white);
-}
-.hero-contact .hero-email {
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.72);
-}
-.hero-btns {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-/* slide dots */
-.slide-dots {
-  position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  display: flex;
-  gap: 8px;
-}
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.35);
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.dot.active { background: var(--accent); }
-
-/* ---- SERVICE STRIP ---- */
-.service-strip {
-  background: var(--primary);
-  padding: 52px 32px;
-}
-.service-strip-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-.service-strip h2 {
-  color: var(--white);
-  font-size: clamp(1.3rem, 3vw, 1.9rem);
-  margin-bottom: 10px;
-}
-.service-strip .strip-sub {
-  color: rgba(255,255,255,0.6);
-  font-size: 0.92rem;
-  margin-bottom: 40px;
-}
-.service-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 32px 48px;
-}
-.svc-icon-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  color: rgba(255,255,255,0.75);
-  font-size: 0.82rem;
-  font-family: 'IBM Plex Mono', monospace;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  max-width: 110px;
-  text-align: center;
-  transition: color 0.2s;
-  text-decoration: none;
-}
-.svc-icon-item:hover { color: var(--accent); }
-.svc-icon-item .ico { font-size: 2rem; }
-
-/* ---- WHY GRID ---- */
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
-  background: var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-.why-item {
-  background: var(--white);
-  padding: 40px 36px;
-  transition: var(--transition);
-}
-.why-item:hover { background: var(--light); }
-.why-num {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  color: var(--accent);
-  margin-bottom: 14px;
-  display: block;
-}
-.why-item h3 { margin-bottom: 10px; font-size: 1.1rem; }
-
-/* DBE Banner */
-.dbe-banner {
-  background: var(--secondary);
-  padding: 20px 32px;
-  text-align: center;
-}
-.dbe-banner p {
-  color: rgba(255,255,255,0.85);
-  font-size: 0.88rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.dbe-banner strong { color: var(--accent); }
-
-@media (max-width: 768px) {
-  .why-grid { grid-template-columns: 1fr; }
-  .hero-logo { width: 90px; }
-}
-</style>
+</script>
+<!-- TODO before publish: add "sameAs": ["<LinkedIn company URL>"] to the JSON-LD above,
+     and NAICS/identifier fields only once verified. Structured data must match visible page content. -->
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo">
-      <img src="polaris_logo.png" alt="Polaris Bridge Engineering LLC"/>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="polaris_logo.png" alt="Polaris Bridge Engineering LLC logo">
+      <span class="brand-name">Polaris Bridge Engineering LLC
+        <small>Bridge · Structural · Infrastructure</small>
+      </span>
     </a>
-    <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">☰</button>
-    <ul class="nav-menu">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html" class="nav-cta">Contact</a></li>
-    </ul>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">☰</label>
+    <nav class="primary" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="teaming.html">Teaming &amp; Qualifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </div>
-</nav>
+</header>
 
-<!-- Hero Slideshow -->
-<section class="hero" id="hero">
-  <div class="slide active" style="background-image:url('Home%20page%20Photo-1%20large.jpg')"></div>
-  <div class="slide" style="background-image:url('Home%20page%20photo-2%20large.webp')"></div>
-  <div class="slide" style="background-image:url('Home%20page%20photo-3%20large.webp')"></div>
-  <div class="slide" style="background-image:url('Home%20page%20Photo-4%20large.jpg')"></div>
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <img src="polaris_logo.png" alt="Polaris Bridge Engineering" class="hero-logo"/>
-    <h1 class="hero-company">Polaris Bridge Engineering<br/>&amp; Consulting, LLC</h1>
-    <p class="hero-tagline">Structural &nbsp;·&nbsp; Bridge &nbsp;·&nbsp; Infrastructure Engineering</p>
-    <div class="hero-divider"></div>
-    <div class="hero-contact">
-      <a href="tel:7324917038" class="hero-phone">732.491.7038</a>
-      <a href="mailto:info@polarisbridgeengineering.com" class="hero-email">info@polarisbridgeengineering.com</a>
-    </div>
-    <div class="hero-btns">
-      <a href="projects.html" class="btn btn-primary">View Our Projects</a>
-      <a href="about.html" class="btn btn-secondary">About Polaris</a>
-      <a href="Polaris_Capability_Statement.pdf" class="btn btn-secondary" download>Capability Statement</a>
+<section class="hero">
+  <svg class="hero-art" viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" stroke="#182432" stroke-width="1">
+    <!-- deck & girder -->
+    <line x1="0" y1="80" x2="640" y2="80"/>
+    <line x1="0" y1="86" x2="640" y2="86" stroke-width="2.5"/>
+    <line x1="0" y1="104" x2="640" y2="104"/>
+    <!-- piers -->
+    <g stroke-width="1.2">
+      <path d="M110 104 L102 210 M110 104 L118 210 M96 210 L124 210 M92 216 L128 216"/>
+      <path d="M320 104 L312 210 M320 104 L328 210 M306 210 L334 210 M302 216 L338 216"/>
+      <path d="M530 104 L522 210 M530 104 L538 210 M516 210 L544 210 M512 216 L548 216"/>
+    </g>
+    <!-- grade line & hatch -->
+    <line x1="0" y1="228" x2="640" y2="228"/>
+    <g stroke-width=".7" opacity=".6">
+      <line x1="20" y1="228" x2="10" y2="240"/><line x1="60" y1="228" x2="50" y2="240"/>
+      <line x1="100" y1="228" x2="90" y2="240"/><line x1="140" y1="228" x2="130" y2="240"/>
+      <line x1="180" y1="228" x2="170" y2="240"/><line x1="220" y1="228" x2="210" y2="240"/>
+      <line x1="260" y1="228" x2="250" y2="240"/><line x1="300" y1="228" x2="290" y2="240"/>
+      <line x1="340" y1="228" x2="330" y2="240"/><line x1="380" y1="228" x2="370" y2="240"/>
+      <line x1="420" y1="228" x2="410" y2="240"/><line x1="460" y1="228" x2="450" y2="240"/>
+      <line x1="500" y1="228" x2="490" y2="240"/><line x1="540" y1="228" x2="530" y2="240"/>
+      <line x1="580" y1="228" x2="570" y2="240"/><line x1="620" y1="228" x2="610" y2="240"/>
+    </g>
+    <!-- span dimension line -->
+    <g stroke-width=".8" opacity=".7">
+      <line x1="110" y1="46" x2="320" y2="46"/>
+      <line x1="110" y1="40" x2="110" y2="52"/><line x1="320" y1="40" x2="320" y2="52"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow">Bridge • Structural • Infrastructure</p>
+    <h1>Bridge Engineering Expertise for Complex Infrastructure</h1>
+    <p class="lede">Polaris Bridge Engineering LLC provides principal-led bridge design, rehabilitation, load rating, inspection support, structural assessment, and construction engineering for transportation agencies, prime consultants, and contractors.</p>
+    <p class="proof-line">Virginia-Certified DBE/MBE Firm&nbsp;&nbsp;|&nbsp;&nbsp;PE Licensed in VA, MD, DC, NY &amp; NJ&nbsp;&nbsp;|&nbsp;&nbsp;20+ Years of Experience</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="contact.html">Discuss a Project</a>
+      <a class="btn btn-secondary" href="experience.html">View Experience</a>
+      <a class="text-link" href="Polaris_Capability_Statement.pdf">Download Capability Statement</a>
     </div>
   </div>
-
-  <div class="slide-dots" id="dots"></div>
 </section>
 
-<!-- DBE Notice -->
-<div class="dbe-banner">
-  <p><strong>Certified Virginia DBE/MBE Firm</strong> — Actively seeking teaming opportunities with prime consultants and contractors on Federal, State, and local transportation and infrastructure projects.</p>
-</div>
-
-<!-- Services Strip -->
-<div class="service-strip">
-  <div class="service-strip-inner">
-    <h2>Engineering Services</h2>
-    <p class="strip-sub">Multi-state PE licensure · VA • MD • DC • NY • NJ</p>
-    <div class="service-icons">
-      <a href="services.html#bridge" class="svc-icon-item">
-        <span class="ico">🌉</span>Bridge Design
-      </a>
-      <a href="services.html#bridge" class="svc-icon-item">
-        <span class="ico">🔧</span>Bridge Rehabilitation
-      </a>
-      <a href="services.html#inspection" class="svc-icon-item">
-        <span class="ico">🔍</span>Inspection &amp; Load Rating
-      </a>
-      <a href="services.html#structural" class="svc-icon-item">
-        <span class="ico">🏗️</span>Structural Engineering
-      </a>
-      <a href="services.html#commercial" class="svc-icon-item">
-        <span class="ico">🏢</span>Commercial Building
-      </a>
-      <a href="services.html#construction" class="svc-icon-item">
-        <span class="ico">⚙️</span>Shoring &amp; Jacking
-      </a>
+<section class="block">
+  <div class="wrap">
+    <div class="sheet-head">
+      <span class="sheet-code">S-101 / Core Services</span>
+      <h2>Focused Engineering Support Across the Bridge Lifecycle</h2>
+      <hr class="sheet-rule">
+      <p class="sub">From preliminary evaluation through final design and construction support, Polaris helps project teams solve complex bridge and structural challenges with practical, well-documented engineering.</p>
     </div>
-  </div>
-</div>
-
-<!-- Why Choose Us -->
-<section class="section">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="section-label">Why Polaris</span>
-      <h2>The Polaris Advantage</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-item">
-        <span class="why-num">01</span>
-        <h3>20+ Years of Complex Projects</h3>
-        <p>From major design-build programs like Virginia's HRBT Expansion to underground transit stations beneath Manhattan — Polaris brings proven experience on some of the most technically demanding infrastructure projects in the country.</p>
+    <div class="grid-4">
+      <div class="card">
+        <h3>Bridge Design &amp; Rehabilitation</h3>
+        <p>Design and analysis for new bridges, replacements, widenings, staged construction, and rehabilitation of steel, prestressed concrete, and cast-in-place concrete structures.</p>
+        <a class="text-link" href="services.html#design">Explore service →</a>
       </div>
-      <div class="why-item">
-        <span class="why-num">02</span>
-        <h3>Multi-Agency Expertise</h3>
-        <p>Direct working knowledge of VDOT, NYDOT, NJDOT, ODOT, TxDOT, TDOT, and Port Authority NY/NJ standards — we know agency requirements and deliver compliant, build-ready engineering packages.</p>
+      <div class="card">
+        <h3>Load Rating &amp; Inspection Support</h3>
+        <p>LRFR and LFR load rating, condition assessment, inspection support, posting evaluation, and clear documentation aligned with AASHTO MBE and owner requirements.</p>
+        <a class="text-link" href="services.html#rating">Explore service →</a>
       </div>
-      <div class="why-item">
-        <span class="why-num">03</span>
-        <h3>Certified DBE/MBE Partner</h3>
-        <p>Certified Virginia DBE/MBE firm — the ideal teaming partner for prime consultants and contractors seeking to meet disadvantaged business enterprise participation goals on public infrastructure projects.</p>
+      <div class="card">
+        <h3>Construction Engineering</h3>
+        <p>Temporary works, jacking and blocking, erection-stage analysis, constructability review, shop drawing review, and construction-phase engineering support.</p>
+        <a class="text-link" href="services.html#construction">Explore service →</a>
       </div>
-      <div class="why-item">
-        <span class="why-num">04</span>
-        <h3>Responsive &amp; Practical</h3>
-        <p>24–48 hour response on all inquiries. Competitive fees without compromising engineering quality. Deliverables designed for real-world construction — not just paper compliance.</p>
+      <div class="card">
+        <h3>Structural Assessment &amp; Facility Engineering</h3>
+        <p>Condition assessment, repair recommendations, equipment support framing, structural modifications, retaining walls, and transportation-facility structures.</p>
+        <a class="text-link" href="services.html#assessment">Explore service →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Stats Bar -->
-<div class="stats-bar">
-  <div class="stats-bar-inner">
-    <div class="stat-item">
-      <span class="stat-number">20+</span>
-      <span class="stat-label">Years of Bridge &amp; Structural Experience</span>
+<section class="block alt">
+  <div class="wrap">
+    <div class="sheet-head">
+      <span class="sheet-code">S-102 / Perspective</span>
+      <h2>Engineering Informed by Design, Construction, and Ownership</h2>
+      <hr class="sheet-rule">
     </div>
-    <div class="stat-item">
-      <span class="stat-number">5</span>
-      <span class="stat-label">PE Licenses<br/>VA • MD • DC • NY • NJ</span>
+    <div class="prose">
+      <p>Peng Chen, P.E., has worked as a structural designer, construction engineer, consulting engineer, and owner's representative. That experience gives Polaris a practical understanding of how technical decisions affect design coordination, construction sequencing, review requirements, maintenance, and long-term performance.</p>
+      <p>Every assignment receives direct principal involvement, with an emphasis on clear calculations, coordinated deliverables, constructibility, and timely communication.</p>
     </div>
-    <div class="stat-item">
-      <span class="stat-number">9+</span>
-      <span class="stat-label">Major Project Types Delivered</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number">10+</span>
-      <span class="stat-label">States &amp; DOTs Served</span>
-    </div>
-  </div>
-</div>
-
-<!-- CTA -->
-<section class="cta-banner">
-  <h2>Ready to Discuss Your Project?</h2>
-  <p>Whether you need bridge design, load rating, rehabilitation, or construction support — we respond within 24–48 hours.</p>
-  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
-    <a href="tel:7324917038" class="btn btn-accent-outline">📞 732.491.7038</a>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="footer-inner">
+<section class="block">
+  <div class="wrap">
+    <div class="sheet-head">
+      <span class="sheet-code">S-103 / Representative Experience</span>
+      <h2>Experience on Major Bridge and Transit Programs</h2>
+      <hr class="sheet-rule">
+      <p class="sub">Peng's representative experience includes complex highway, rail, transit, and facility assignments performed during his career before and after founding Polaris.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <span class="kicker">Virginia</span>
+        <h3>Hampton Roads Bridge-Tunnel Expansion</h3>
+        <p>Bridge and structural design experience on a major design-build program, including trestle and related corridor structures.</p>
+      </div>
+      <div class="card">
+        <span class="kicker">New York</span>
+        <h3>East Side Access / Grand Central Madison</h3>
+        <p>Lead structural engineering experience for a major underground LIRR station design submission within a deep Manhattan cavern.</p>
+      </div>
+      <div class="card">
+        <span class="kicker">Multi-State</span>
+        <h3>Multi-State Bridge Programs</h3>
+        <p>Bridge design, rehabilitation, inspection, and load-rating experience involving VDOT, NYSDOT, NJDOT, ODOT, TxDOT, TDOT, transit agencies, railroads, and major public owners.</p>
+      </div>
+      <div class="card">
+        <span class="kicker">Full Portfolio</span>
+        <h3>Polaris Assignments &amp; Case Studies</h3>
+        <p>Role-based case studies distinguishing Polaris assignments from the principal's prior experience.</p>
+        <a class="text-link" href="experience.html">View experience →</a>
+      </div>
+    </div>
+    <div class="attribution">
+      <strong>Attribution Note</strong>
+      Representative experience includes work performed by Peng Chen, P.E. while employed by other organizations before the formation of Polaris Bridge Engineering LLC. Project and agency names identify professional experience and do not imply current affiliation or endorsement.
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <div class="sheet-head">
+      <span class="sheet-code">S-104 / Why Polaris</span>
+      <h2>A Specialized Partner for Demanding Assignments</h2>
+      <hr class="sheet-rule">
+    </div>
+    <div class="feature-list">
+      <p><strong>Direct principal involvement.</strong> Senior technical attention from scope development through final deliverables.</p>
+      <p><strong>Bridge-focused expertise.</strong> Deep experience with steel, prestressed concrete, composite, substructure, foundation, and rehabilitation systems.</p>
+      <p><strong>Lifecycle perspective.</strong> Solutions developed with design intent, construction sequence, inspection access, durability, and maintenance in mind.</p>
+      <p><strong>Flexible teaming support.</strong> Responsive support for task orders, surge needs, specialty analysis, independent review, and construction-phase assignments.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sheet-head">
+      <span class="sheet-code">S-105 / Teaming</span>
+      <h2>A Technical DBE/MBE Partner — Not Just a Participation Number</h2>
+      <hr class="sheet-rule">
+    </div>
+    <div class="prose">
+      <p>Polaris supports prime consultants and contractors with senior-level bridge and structural engineering capacity. The firm is positioned for focused scopes, task-order support, specialty calculations, design production, independent review, field evaluation, and construction engineering.</p>
+      <p>Virginia DBE/MBE certification provides an additional teaming benefit, while the primary value remains experienced, accountable technical delivery.</p>
+      <p><a class="text-link" href="teaming.html">Teaming &amp; qualifications for prime consultants →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Let's Discuss Your Project or Teaming Need</h2>
+    <p>Share the project location, anticipated scope, schedule, and the support you need. Polaris will respond with a focused discussion of approach, availability, and next steps.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="contact.html">Start a Project Conversation</a>
+      <a class="btn btn-secondary" href="Polaris_Capability_Statement.pdf">Download Capability Statement</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
     <div class="footer-grid">
       <div>
-        <div class="footer-logo"><img src="polaris_logo.png" alt="Polaris Bridge Engineering"/></div>
-        <p class="footer-desc">Civil and structural engineering consulting specializing in bridge design, rehabilitation, load rating, and infrastructure projects across the Mid-Atlantic and Northeast.</p>
-        <a href="Polaris_Capability_Statement.pdf" class="btn btn-accent-outline" style="font-size:0.68rem;padding:8px 16px;" download>Download Capability Statement</a>
+        <h4>Polaris Bridge Engineering LLC</h4>
+        <p>Principal-led bridge design, rehabilitation, load rating, inspection support, structural assessment, and construction engineering for transportation agencies, prime consultants, contractors, and facility owners.</p>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Navigation</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
+          <li><a href="experience.html">Experience</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="teaming.html">Teaming &amp; Qualifications</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html#bridge">Bridge Design</a></li>
-          <li><a href="services.html#inspection">Bridge Inspection</a></li>
-          <li><a href="services.html#structural">Structural Engineering</a></li>
-          <li><a href="services.html#commercial">Commercial Building</a></li>
-          <li><a href="services.html#construction">Shoring &amp; Jacking</a></li>
+          <li><a href="services.html#design">Bridge Design &amp; Rehabilitation</a></li>
+          <li><a href="services.html#rating">Load Rating &amp; Inspection</a></li>
+          <li><a href="services.html#construction">Construction Engineering</a></li>
+          <li><a href="services.html#assessment">Structural Assessment</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Contact</h4>
-        <div class="footer-contact-item">📞 <a href="tel:7324917038">732.491.7038</a></div>
-        <div class="footer-contact-item">✉️ <a href="mailto:info@polarisbridgeengineering.com">info@polarisbridgeengineering.com</a></div>
-        <div class="footer-contact-item" style="flex-direction:column;gap:4px;">
-          <span>📍 Service Area:</span>
-          <span>VA • MD • DC • NY • NJ</span>
-        </div>
+        <ul>
+          <li><a href="mailto:info@polarisbridgeengineering.com">info@polarisbridgeengineering.com</a></li>
+          <li><a href="tel:+17324917038">732-491-7038</a></li>
+          <li>Based in Northern Virginia</li>
+          <li><a href="Polaris_Capability_Statement.pdf">Capability Statement (PDF)</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-copyright">© 2026 Polaris Bridge Engineering &amp; Consulting, LLC. All rights reserved.</p>
-      <span class="footer-certs">Certified DBE/MBE — Virginia | PE Licensed: VA • MD • DC • NY • NJ</span>
+    <div class="footer-legal">
+      <span>© 2026 Polaris Bridge Engineering LLC. All rights reserved.</span>
+      <span>Virginia-Certified DBE/MBE Firm | PE Licensed: VA • MD • DC • NY • NJ</span>
     </div>
   </div>
 </footer>
-
-<script>
-// Slideshow
-const slides = document.querySelectorAll('.slide');
-const dotsEl = document.getElementById('dots');
-let cur = 0;
-
-slides.forEach((_, i) => {
-  const d = document.createElement('div');
-  d.className = 'dot' + (i === 0 ? ' active' : '');
-  d.onclick = () => goTo(i);
-  dotsEl.appendChild(d);
-});
-
-function goTo(n) {
-  slides[cur].classList.remove('active');
-  dotsEl.children[cur].classList.remove('active');
-  cur = (n + slides.length) % slides.length;
-  slides[cur].classList.add('active');
-  dotsEl.children[cur].classList.add('active');
-}
-
-setInterval(() => goTo(cur + 1), 5000);
-</script>
 
 </body>
 </html>
