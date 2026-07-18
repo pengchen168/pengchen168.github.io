@@ -20,6 +20,20 @@
 .project-card[data-cat] { transition: opacity 0.3s, transform 0.3s; }
 .project-card.hidden { display: none; }
 
+/* Final safeguard: never display legacy experience labels on project images. */
+.experience-badge,
+.project-card .experience-badge,
+.experience-badge.polaris {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.page-hero h1 {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .page-hero-inner {
   max-width: 1000px;
 }
