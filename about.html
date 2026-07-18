@@ -1,134 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peng Chen, P.E. | Polaris Bridge Engineering</title>
-<meta name="description" content="Meet Peng Chen, P.E., founder of Polaris Bridge Engineering and a bridge and structural engineer with more than 20 years of infrastructure experience.">
-<link rel="canonical" href="https://www.polarisbridgeengineering.com/about.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Polaris Bridge Engineering LLC">
-<meta property="og:title" content="Peng Chen, P.E. | Polaris Bridge Engineering">
-<meta property="og:description" content="Meet Peng Chen, P.E., founder of Polaris Bridge Engineering and a bridge and structural engineer with more than 20 years of infrastructure experience.">
-<meta property="og:url" content="https://www.polarisbridgeengineering.com/about.html">
-<meta property="og:image" content="https://www.polarisbridgeengineering.com/polaris_logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About | Polaris Bridge Engineering LLC</title>
+<meta name="description" content="Peng Chen, P.E. — Principal and Civil Structural Engineer with 20+ years of bridge and infrastructure engineering experience."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link crossorigin="" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
 </head>
-<body>
+<body class="page-offset">
 
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="index.html">
-      <img src="polaris_logo.png" alt="Polaris Bridge Engineering LLC logo">
-      <span class="brand-name">Polaris Bridge Engineering LLC
-        <small>Bridge · Structural · Infrastructure</small>
-      </span>
-    </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
-    <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">☰</label>
-    <nav class="primary" aria-label="Primary">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="about.html" aria-current="page">About</a></li>
-        <li><a href="teaming.html">Teaming &amp; Qualifications</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="polaris_logo.png" alt="Polaris Bridge Engineering LLC"/></a>
+    <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">☰</button>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
   </div>
-</header>
+</nav>
 
-<section class="block">
-  <div class="wrap">
-    <div class="sheet-head">
-      <span class="sheet-code">S-400 / About</span>
-      <h1>Principal-Led Bridge and Structural Engineering</h1>
-      <hr class="sheet-rule">
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-hero-label">Our Principal</span>
+    <h1>About Polaris</h1>
+    <p>Founded by a licensed Professional Engineer with more than 20 years of experience leading bridge, highway, rail, civil structural and transit projects for state transportation agencies and major public owners, including the Virginia, Maryland, Washington DC, New York, New Jersey DOTs, CSX Transportation, MTA New York City Transit, WMATA, and the Port Authority of New York and New Jersey.</p>
+  </div>
+</section>
+
+<!-- Bio Section -->
+<section class="section">
+  <div class="bio-grid">
+    <div class="bio-sidebar">
+      <div style="border-radius:var(--radius-lg);overflow:hidden;margin-bottom:20px;">
+        <img src="peng_photo.png" alt="Peng Chen, P.E." style="width:100%;height:auto;display:block;border-radius:var(--radius-lg);"/>
+      </div>
+      <h3 style="margin-bottom:6px;">Peng Chen, P.E.</h3>
+      <p style="color:var(--secondary);font-family:'IBM Plex Mono',monospace;font-size:0.78rem;letter-spacing:0.08em;margin-bottom:24px;">Principal, Civil Structural Engineer</p>
+      <div class="bio-credentials">
+        <div class="credential-item">
+          <span class="credential-icon">📋</span>
+          <div>
+            <span class="credential-label">PE Licenses</span>
+            <span class="credential-value">Virginia (#040255312)</span>
+            <span class="credential-sub">Maryland (#32464) • New York (#089243) • New Jersey (#24GE04863600) • DC</span>
+          </div>
+        </div>
+        <div class="credential-item">
+          <span class="credential-icon">🔍</span>
+          <div>
+            <span class="credential-label">Certification</span>
+            <span class="credential-value">FHWA NBIS Certificated Bridge Inspector</span>
+          </div>
+        </div>
+        <div class="credential-item">
+          <span class="credential-icon">🏛️</span>
+          <div>
+            <span class="credential-label">Memberships</span>
+            <span class="credential-value">ACEC • ASCE</span>
+          </div>
+        </div>
+        <div class="credential-item">
+          <span class="credential-icon">🏆</span>
+          <div>
+            <span class="credential-label">Firm Certification</span>
+            <span class="credential-value">Certified DBE/MBE — Virginia</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:28px;display:flex;flex-direction:column;gap:10px;">
+        <a href="tel:7324917038" class="btn btn-primary">📞 (732) 491-7038</a>
+        <a href="contact.html" class="btn btn-outline">Request Consultation</a>
+        <a href="Polaris_Capability_Statement.pdf" class="btn btn-accent-outline" download>Download CV / Capability Statement</a>
+      </div>
     </div>
-    <div class="prose">
-      <p>Polaris Bridge Engineering LLC is a specialized civil and structural engineering consulting firm focused on bridges, transportation infrastructure, construction engineering, and complex existing-structure assignments.</p>
-      <p>The firm was founded by Peng Chen, P.E., to give clients direct access to senior technical judgment, practical project delivery, and responsive communication. Polaris supports prime consultants, contractors, public owners, and facility owners through focused scopes, task-order assignments, specialty analysis, independent review, and construction-phase engineering.</p>
 
-      <h2>Peng Chen, P.E. | Founder and Principal</h2>
-      <p>Peng Chen has more than 20 years of progressive bridge and structural engineering experience spanning design, rehabilitation, load rating, inspection, construction engineering, and owner-side technical review. His work has involved major highway, railroad, transit, airport, and facility programs across the United States.</p>
-      <p>His bridge experience includes steel plate girder, prestressed concrete, continuous composite, culvert, substructure, and foundation systems. He has supported new bridge design, replacement and widening, rehabilitation, load rating, condition assessment, temporary works, shop drawing review, and construction-phase problem solving.</p>
-      <p>Peng's representative prior project experience includes the Hampton Roads Bridge-Tunnel Expansion in Virginia; the MTA/LIRR East Side Access program and Gowanus Expressway rehabilitation in New York City; multi-span VDOT bridge replacements; curved, skewed, and railroad steel-girder bridges in Ohio; NJDOT bridge and culvert projects; and structural inspection programs at major Port Authority aviation facilities.</p>
-      <p>Having served as a structural designer, construction engineer, consulting engineer, and owner's representative, Peng understands the priorities of designers, contractors, reviewers, and owners. He evaluates each assignment from a full-lifecycle perspective — considering not only calculation and code compliance, but also constructability, sequencing, inspection access, durability, maintenance, and clear documentation.</p>
-      <p>Peng earned a Master of Science in Civil Engineering from Rutgers University and a Bachelor of Science in Civil Engineering from Xi'an University of Architecture &amp; Technology. He is a licensed Professional Engineer in Virginia, Maryland, Washington, D.C., New York, and New Jersey.</p>
-
-      <h2>Credentials</h2>
-      <ul>
-        <li>Professional Engineer: Virginia, Maryland, Washington, D.C., New York, and New Jersey</li>
-        <li>Master of Science in Civil Engineering: Rutgers University</li>
-        <li>Bachelor of Science in Civil Engineering: Xi'an University of Architecture &amp; Technology</li>
-        <!-- TODO before publish: replace the line below with the EXACT credential title from
-             the issued FHWA/NBIS certificate or qualification record. Do not use "Certificated"
-             and do not present a training course as a federal certification unless that is the
-             certificate's actual wording. -->
-        <li>FHWA NBIS Safety Inspection of In-Service Bridges</li>
-        <!-- TODO before publish: add tunnel inspection credential ONLY if current, using the
-             exact issued title. Otherwise leave it out. -->
-        <!-- TODO before publish: optionally add the Virginia DBE/MBE certification number and
-             expiration date here once verified as publicly listed and current. -->
-        <li>Firm certification: Virginia DBE/MBE</li>
-      </ul>
+    <div class="bio-content">
+      <span class="section-label">About</span>
+      <h2 style="margin-bottom:24px;">Peng Chen, P.E.</h2>
+      <p style="font-size:1.05rem;margin-bottom:20px;">Peng Chen is the Founder and Principal of Polaris Bridge Engineering and Consulting. He has more than 20 years of progressive experience in bridge and structural engineering, specializing in bridge design, rehabilitation, load rating, inspection, shop drawings, and construction engineering services for major federal, state, railroad, and transit agencies.</p>
+      <p style="margin-bottom:20px;">Throughout his career, Peng has successfully delivered complex, multi-span bridge projects involving steel plate girder, prestressed concrete, and continuous composite bridge systems for numerous transportation agencies, including the Virginia, New York, New Jersey, Ohio, Texas, and Tennessee Departments of Transportation, as well as the Port Authority of New York and New Jersey, CSX Transportation, MTA New York City Transit, and the Washington Metropolitan Area Transit Authority (WMATA).</p>
+      <p style="margin-bottom:20px;">Peng has extensive experience leading large, complex design-build projects, including Virginia's Hampton Roads Bridge-Tunnel Expansion and the MTA Long Island Rail Road (LIRR) East Side Access Project in New York City. His technical expertise spans the entire project lifecycle — from planning and design through construction and asset management.</p>
+      <p style="margin-bottom:20px;">As an FHWA National Bridge Inspection Standards (NBIS) Certified Bridge Inspector and licensed Professional Engineer in Virginia, Maryland, Washington, D.C., New York, and New Jersey, Peng possesses deep expertise in AASHTO, AREMA, and FHWA standards and industry best practices.</p>
+      <p style="margin-bottom:20px;">Having served as a structural designer, construction engineer, owner's representative, and consulting engineer, Peng brings a unique perspective to every assignment. He understands the challenges and priorities of project owners, contractors, and designers alike, enabling him to develop practical, constructible, and cost-effective engineering solutions. He approaches every project with a lifecycle perspective, considering not only the immediate design requirements but also the long-term performance, maintenance, and durability of the structure.</p>
+      <p style="margin-bottom:40px;">Peng earned his Master of Science in Civil Engineering from Rutgers University. In addition to his multi-state professional engineering licenses, he maintains FHWA certifications in Bridge Inspection and Tunnel Inspection and can readily obtain licensure in additional jurisdictions as project needs require. <a href="https://www.linkedin.com/in/chen-peng-70a7a869/" target="_blank" style="color:var(--secondary);font-weight:600;">Connect with Peng on LinkedIn →</a></p>
     </div>
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="wrap">
-    <h2>Work directly with an experienced bridge and structural engineer.</h2>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="contact.html">Contact Peng</a>
-    </div>
-  </div>
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Work With an Experienced PE</h2>
+  <p>Contact us to discuss your bridge or structural engineering project. We respond within 24–48 hours.</p>
+  <a href="contact.html" class="btn btn-primary">Get in Touch</a>
 </section>
 
-<footer class="site-footer">
-  <div class="wrap">
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
     <div class="footer-grid">
       <div>
-        <h4>Polaris Bridge Engineering LLC</h4>
-        <p>Principal-led bridge design, rehabilitation, load rating, inspection support, structural assessment, and construction engineering for transportation agencies, prime consultants, contractors, and facility owners.</p>
+        <div class="footer-logo"><img src="polaris_logo.png" alt="Polaris Bridge Engineering"/></div>
+        <p class="footer-desc">Civil and structural engineering consulting specializing in bridge design, rehabilitation, load rating, and infrastructure projects across the Mid-Atlantic and Northeast.</p>
       </div>
-      <div>
+      <div class="footer-col">
         <h4>Navigation</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="experience.html">Experience</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="teaming.html">Teaming &amp; Qualifications</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-      <div>
+      <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html#design">Bridge Design &amp; Rehabilitation</a></li>
-          <li><a href="services.html#rating">Load Rating &amp; Inspection</a></li>
-          <li><a href="services.html#construction">Construction Engineering</a></li>
-          <li><a href="services.html#assessment">Structural Assessment</a></li>
+          <li><a href="services.html#bridge">Bridge Design</a></li>
+          <li><a href="services.html#inspection">Bridge Inspection</a></li>
+          <li><a href="services.html#structural">Structural Engineering</a></li>
+          <li><a href="services.html#construction">Shoring &amp; Jacking</a></li>
         </ul>
       </div>
-      <div>
+      <div class="footer-col">
         <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:info@polarisbridgeengineering.com">info@polarisbridgeengineering.com</a></li>
-          <li><a href="tel:+17324917038">732-491-7038</a></li>
-          <li>Based in Northern Virginia</li>
-          <li><a href="Polaris_Capability_Statement.pdf">Capability Statement (PDF)</a></li>
-        </ul>
+        <div class="footer-contact-item">📞 <a href="tel:7324917038">(732) 491-7038</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:info@polarisbridgeengineering.com">info@polarisbridgeengineering.com</a></div>
       </div>
     </div>
-    <div class="footer-legal">
-      <span>© 2026 Polaris Bridge Engineering LLC. All rights reserved.</span>
-      <span>Virginia-Certified DBE/MBE Firm | PE Licensed: VA • MD • DC • NY • NJ</span>
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2026 Polaris Bridge Engineering LLC. All rights reserved.</p>
+      <span class="footer-certs">Certified DBE/MBE — Virginia | PE Licensed: VA • MD • DC • NY • NJ</span>
     </div>
   </div>
 </footer>

@@ -1,13 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Experience | Polaris Bridge Engineering</title>
-<link rel="canonical" href="https://www.polarisbridgeengineering.com/experience.html">
-<meta http-equiv="refresh" content="0; url=experience.html">
-<meta name="robots" content="noindex">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Projects | Polaris Bridge Engineering LLC</title>
+<meta name="description" content="Selected bridge and infrastructure engineering projects — WMATA, VDOT, NYDOT, NJDOT, TxDOT, and more."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link crossorigin="" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 28px;
+}
+.project-card { display: block; }
+.project-card[data-cat] { transition: opacity 0.3s, transform 0.3s; }
+.project-card.hidden { display: none; }
+</style>
 </head>
-<body>
-<p>This page has moved to <a href="experience.html">Experience</a>.</p>
+<body class="page-offset">
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="polaris_logo.png" alt="Polaris Bridge Engineering LLC"/></a>
+    <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">☰</button>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-hero-label">Our Work</span>
+    <h1>Selected Projects</h1>
+    <p>A representative sample of bridge design, rehabilitation, inspection, and infrastructure projects completed across the United States.</p>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section class="section">
+  <div class="section-inner">
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects</button>
+      <button class="filter-btn" onclick="filterProjects('highway', this)">Highway Bridges</button>
+      <button class="filter-btn" onclick="filterProjects('inspection', this)">Inspection</button>
+      <button class="filter-btn" onclick="filterProjects('transit', this)">Transit</button>
+      <button class="filter-btn" onclick="filterProjects('structural', this)">Structural</button>
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
+
+      <!-- VDOT Bridge Design -->
+      <div class="project-card" data-cat="highway">
+        <img src="VDOT%20bridge_design%20Project.jpg" alt="VDOT Bridge Design"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Bridge Design</span>
+          <h3>VDOT Bridge Design</h3>
+          <p>New bridge design and replacement projects for VDOT — steel plate girder bridges, prestressed concrete girder bridges, abutments, piers, pile foundations, and culvert structures. Design developed in compliance with AASHTO LRFD and VDOT standards.</p>
+        </div>
+      </div>
+
+      <!-- VDOT Bridge Rehabilitation -->
+      <div class="project-card" data-cat="highway">
+        <img src="VDOT%20On-Call%20bridge_rehab.jpg" alt="VDOT On-Call Bridge Rehabilitation"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Bridge Rehabilitation</span>
+          <h3>VDOT On-Call Bridge Rehabilitation</h3>
+          <p>On-call bridge rehabilitation design services for VDOT — bearing replacement, expansion joint replacement, deck rehabilitation, steel section repair, concrete patching, and full construction plan packages across multiple Virginia districts.</p>
+        </div>
+      </div>
+
+      <!-- VDOT Bridge Inspection -->
+      <div class="project-card" data-cat="inspection highway">
+        <img src="VDOT%20bridge_inspection%20Project.jpg" alt="VDOT Bridge Inspection"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · NBIS Inspection &amp; Load Rating</span>
+          <h3>VDOT Bridge Inspection &amp; Load Rating</h3>
+          <p>NBIS structural inspections and LRFR/LFR load rating analyses for VDOT bridges — steel, prestressed concrete, timber, and culvert structures. Includes load rating reports, condition assessments, and posting evaluations per AASHTO MBE using AASHTO BrR software.</p>
+        </div>
+      </div>
+
+      <!-- VDOT HRBT -->
+      <div class="project-card" data-cat="highway">
+        <img src="VDOT%20HRBT%20Project%20Photo.jpg" alt="VDOT HRBT Extension Project"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Major Infrastructure</span>
+          <h3>VDOT HRBT Extension — Trestle Bridge Design</h3>
+          <p>3.5-mile new bridge-tunnel expansion parallel to the existing Hampton Roads Bridge-Tunnel on I-64. Trestle bridge superstructure and substructure design, sign structure design, and rehabilitation engineering along the 9-mile corridor.</p>
+        </div>
+      </div>
+
+      <!-- NYC MTA-LIRR Grand Central -->
+      <div class="project-card" data-cat="transit structural">
+        <img src="NYC%20MTA-LIRR%20%E2%80%94%20New%20Grand%20Central%20Terminal%20Station%20Poject%20Photo.webp" alt="NYC MTA-LIRR New Grand Central Terminal Station"/>
+        <div class="project-overlay">
+          <span class="project-cat">Transit · Major Infrastructure</span>
+          <h3>NYC MTA-LIRR — New Grand Central Terminal Station</h3>
+          <p>Lead structural engineer for the 90% design submission of a new 3-level LIRR station in a 1,200 ft underground cavern beneath Midtown Manhattan (East Side Access, Contract CM012) — one of the largest transit infrastructure projects in U.S. history.</p>
+        </div>
+      </div>
+
+      <!-- Airport Inspections -->
+      <div class="project-card" data-cat="inspection structural">
+        <img src="JFK%20EWR%20LaGuardia%20%E2%80%94%20Airport%20Terminal%20%26%20Parking%20Structure%20Inspection.jpg" alt="Port Authority Airport Inspection"/>
+        <div class="project-overlay">
+          <span class="project-cat">Structural · Facility Inspection</span>
+          <h3>JFK / EWR / LaGuardia — Port Authority NY&amp;NJ Airport Inspections</h3>
+          <p>Team leader for structural inspections at John F. Kennedy, Newark Liberty, and LaGuardia airports — terminal buildings, parking garages, hangars, high mast light towers, and port facility structures for the Port Authority of NY &amp; NJ.</p>
+        </div>
+      </div>
+
+      <!-- Commercial Building -->
+      <div class="project-card" data-cat="structural">
+        <img src="Comercial%20Building%20Project_steel_joist_design%20check.jpg" alt="Commercial Building Structural Evaluation"/>
+        <div class="project-overlay">
+          <span class="project-cat">Structural · Building Engineering</span>
+          <h3>Commercial Building Structural Design &amp; Evaluation</h3>
+          <p>Structural design and evaluation of commercial building systems — framing assessments, condition surveys, code compliance reviews per IBC/AISC/ACI, and engineering reports with repair and remediation recommendations for building owners and facility managers.</p>
+        </div>
+      </div>
+
+      <!-- Rooftop RTU -->
+      <div class="project-card" data-cat="structural">
+        <img src="Roof%20TOP%20RTU%20Engineering%20project.jpg" alt="Rooftop RTU Structural Engineering"/>
+        <div class="project-overlay">
+          <span class="project-cat">Structural · Building Engineering</span>
+          <h3>Rooftop RTU Structural Evaluation &amp; Design Support</h3>
+          <p>Structural evaluation and design for rooftop mechanical equipment support — RTU framing, steel dunnage design, existing roof framing capacity checks per ASCE-7, AISC, and IBC, with full stamped engineering drawings for permit submission.</p>
+        </div>
+      </div>
+
+      <!-- Temporary Jacking / Bearing Replacement -->
+      <div class="project-card" data-cat="highway structural">
+        <img src="Temproary%20Bearing%20Replacment%20shoring_jacking.jpg" alt="Temporary Jacking Bridge Design"/>
+        <div class="project-overlay">
+          <span class="project-cat">Highway · Construction Engineering</span>
+          <h3>Temporary Jacking &amp; Shoring — Bridge Bearing Replacement</h3>
+          <p>Specialized temporary works design for bridge bearing replacement operations — jack and blocking plans, temporary shoring design, staged construction sequencing, and load path analysis to safely support bridge superstructures during bearing removal and installation.</p>
+        </div>
+      </div>
+
+    </div><!-- /projects-grid -->
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Have a Similar Project?</h2>
+  <p>Contact us to discuss your bridge or infrastructure engineering needs — we respond within 24–48 hours.</p>
+  <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="polaris_logo.png" alt="Polaris Bridge Engineering"/></div>
+        <p class="footer-desc">Civil and structural engineering consulting specializing in bridge design, rehabilitation, load rating, and infrastructure projects across the Mid-Atlantic and Northeast.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#bridge">Bridge Design</a></li>
+          <li><a href="services.html#inspection">Bridge Inspection</a></li>
+          <li><a href="services.html#structural">Structural Engineering</a></li>
+          <li><a href="services.html#construction">Shoring &amp; Jacking</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">📞 <a href="tel:7324917038">(732) 491-7038</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:info@polarisbridgeengineering.com">info@polarisbridgeengineering.com</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2026 Polaris Bridge Engineering LLC. All rights reserved.</p>
+      <span class="footer-certs">Certified DBE/MBE — Virginia | PE Licensed: VA • MD • DC • NY • NJ</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function filterProjects(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.project-card').forEach(card => {
+    const cats = card.dataset.cat || '';
+    if (cat === 'all' || cats.includes(cat)) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+}
+</script>
+
 </body>
 </html>
