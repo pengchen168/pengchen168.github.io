@@ -19,22 +19,41 @@
 .project-card[data-cat] { transition: opacity 0.3s, transform 0.3s; }
 .project-card.hidden { display: none; }
 
+.page-hero-inner {
+  max-width: 1200px;
+}
+
+.page-hero h1 {
+  max-width: none;
+  font-size: clamp(2rem, 3.15vw, 3.35rem);
+  white-space: nowrap;
+}
+
 .projects-intro {
-  max-width: 900px;
+  max-width: 1120px;
   margin: 0 auto 24px;
   line-height: 1.7;
 }
 
-.experience-attribution {
-  max-width: 960px;
-  margin: 24px auto 0;
-  padding: 18px 22px;
-  color: #243b53;
-  background: #eaf4fa;
-  border-left: 4px solid #1d5f91;
-  border-radius: 4px;
-  font-size: 0.94rem;
-  line-height: 1.6;
+.nav-logo img {
+  width: auto;
+  height: 62px;
+  max-height: none;
+}
+
+.footer-logo img {
+  width: 155px;
+  height: auto;
+  max-width: 100%;
+}
+
+.experience-disclaimer {
+  margin: 32px 0 18px;
+  padding-top: 16px;
+  color: rgba(255, 255, 255, 0.58);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 0.68rem;
+  line-height: 1.55;
   text-align: left;
 }
 
@@ -61,14 +80,23 @@
   background: #eaf4fa;
 }
 
+@media (max-width: 900px) {
+  .page-hero h1 {
+    white-space: normal;
+  }
+}
+
 @media (max-width: 600px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }
 
-  .experience-attribution {
-    padding: 16px 17px;
-    font-size: 0.9rem;
+  .nav-logo img {
+    height: 50px;
+  }
+
+  .footer-logo img {
+    width: 135px;
   }
 }
 </style>
@@ -95,10 +123,7 @@
   <div class="page-hero-inner">
     <span class="page-hero-label">Our Work</span>
     <h1>Selected Bridge and Structural Engineering Experience</h1>
-    <p class="projects-intro">Polaris provides principal-led bridge and structural engineering informed by more than 20 years of experience across highway, rail, transit, airport, and facility projects. The examples below distinguish assignments delivered directly by Polaris from representative experience Peng Chen, P.E. gained while employed by other organizations before founding the firm.</p>
-    <div class="experience-attribution" role="note">
-      <strong>Experience Attribution:</strong> Projects identified as representative principal experience were performed by Peng Chen, P.E. while employed by other organizations before founding Polaris. Project and agency names are included solely to describe his role and technical experience. They do not represent contracts awarded directly to Polaris or imply endorsement by any owner, agency, former employer, or other organization.
-    </div>
+    <p class="projects-intro">Polaris provides principal-led bridge and structural engineering informed by more than 20 years of experience across highway, rail, transit, airport, and facility projects. The examples below distinguish assignments delivered directly by Polaris from representative experience Peng Chen, P.E. gained throughout his professional career.</p>
   </div>
 </section>
 
@@ -260,6 +285,7 @@
         <div class="footer-contact-item">✉️ <a href="mailto:info@polarisbridgeengineering.com">info@polarisbridgeengineering.com</a></div>
       </div>
     </div>
+    <p class="experience-disclaimer"><strong>Experience Attribution:</strong> Projects identified as representative principal experience were performed by Peng Chen, P.E. while employed by other organizations before founding Polaris. Project and agency names are included solely to describe his role and technical experience. They do not represent contracts awarded directly to Polaris or imply endorsement by any owner, agency, former employer, or other organization.</p>
     <div class="footer-bottom">
       <p class="footer-copyright">© 2026 Polaris Bridge Engineering LLC. All rights reserved.</p>
       <span class="footer-certs">Certified DBE/MBE — Virginia | PE Licensed: VA • MD • DC • NY • NJ • WA</span>
